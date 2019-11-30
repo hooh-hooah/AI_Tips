@@ -46,7 +46,22 @@ you need to build two assetbundles
 - hair asset bundle
 - hair "texture" asset bundle
 
+### Change shaders
+
+We don't have hair shader replica atm, so we need to replace the shader to make it work nicely in game. I have example material .unity3d file in here (Click?)
+
 ### Checklist
+
+- Did you marked your prefab and textures in assetbundle?
+- Did you added CmpHair Component?
+- Did you setup CmpHair properly?
+- Did you setup Dynmaic Bones?
+- Did you setup Dynamic Bones properly?
+- Did you make nice textures?
+- Did you changed shader?
+- Did you made it siderloader mod?
+
+- <u>**Did fucking you re-zipped the mod to update?**</u>
 
 ## Troubleshooting
 - bruh
