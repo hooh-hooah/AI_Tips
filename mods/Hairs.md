@@ -1,4 +1,7 @@
 # How to make hairs
+
+don't forget to watch, star and share the repository to not miss further instructions. Idaf about stars but people who want to create new hairs need to watch this so yeah.
+
 ## Requirement
 - Nice above-average IQ
 - basic knowledge of 3D Modeling
