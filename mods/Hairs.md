@@ -50,6 +50,14 @@ you need to build two assetbundles
 
 We don't have hair shader replica atm, so we need to replace the shader to make it work nicely in game. I have example material .unity3d file in here (Click?)
 
+### Add to List
+
+You can add your hair to list by using this template.
+
+### Pack up 
+
+Pack it into sideloader mod!
+
 ### Checklist
 
 - Did you marked your prefab and textures in assetbundle?
@@ -58,10 +66,31 @@ We don't have hair shader replica atm, so we need to replace the shader to make 
 - Did you setup Dynmaic Bones?
 - Did you setup Dynamic Bones properly?
 - Did you make nice textures?
-- Did you changed shader?
-- Did you made it siderloader mod?
+- Did you changed hair material's shader to ILLUSION's nice hair shader?
+- Did you made it into a siderloader mod?
 
 - <u>**Did fucking you re-zipped the mod to update?**</u>
 
+## FAQ
+
+- Bruh dithering
+  
+  embrace it or make your own shader you coomer
+  
+- What the hell? I can only use ONE MATERIAL?
+
+  yes and it's not my fault. blame ILLUSION
+  
+- Do i have to change shader every sigle fucking time?
+ 
+  atm, yes. Expect me to make new hair shader replica or you can just keep doing it.
+
 ## Troubleshooting
-- bruh
+
+- Why is my mod is not updating?
+
+  <u>**Did fucking you re-zipped the mod to update?**</u>
+  
+- Hair texture is not transparent/is flat
+
+  Did you referenced hair texture in prefab assetbundle from list? then please. separate the assetbundle.
