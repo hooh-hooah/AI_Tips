@@ -87,6 +87,10 @@ Pack it into sideloader mod!
 
 ## Troubleshooting
 
+- Oh noes, my model's normal is god damn fugly
+
+  Try "Set Normal" in blender.
+
 - Why is my mod is not updating?
 
   <u>**Did fucking you re-zipped the mod to update?**</u>
