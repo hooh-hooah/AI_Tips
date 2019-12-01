@@ -43,12 +43,26 @@ set texture has actual transparency in alpha.
 
 you need to build two assetbundles
 
-- hair asset bundle
-- hair "texture" asset bundle
+- hair asset bundle (name.unity3d)
+- hair "texture" asset bundle (name_tex.unity3d)
 
-### Change shaders
+### Change shaders and assign materials
 
 We don't have hair shader replica atm, so we need to replace the shader to make it work nicely in game. I have example material .unity3d file in here (Click?)
+
+Follow this step.
+
+1. Open Hair Asset Bundle, Hair Texture Asset Bundle, Material Asset Bundle
+
+2. Switch to texture asset bundle and Click all Textures.
+
+3. Switch to material asset bundle and mark for copy 'hairmat'
+
+4. Switch to Hair Asset Bundle and paste hairmat
+
+5. change mesh material to hairmat
+
+6. change material texture
 
 ### Add to List
 
