@@ -27,13 +27,15 @@ Now you need to prepare your scene
 
 ### Test Hairs
 
-Place hair object and adjust the scale scale it with 3d import options 
+![image-20191203003152198](img\image-20191203003152198.png)
 
-Set hair layer to 10 (A)
+Place hair object and adjust and scale the hair mesh to fit on the head. You'll get where to put it when you get the example scenes.
 
-Setup CmpHair.cs
+Example scenes contains 5 different example hairs. After setting up the mesh and objects on the head, you need to following things:
 
-Setup DynamicBones (you can buy it or do something bad but I purchased one before.)
+- Set hair layer to 10 (A)
+- Setup CmpHair.cs
+- Setup DynamicBones (you can buy it or do something bad but I purchased one before.)
 
 ### Test Textures
 
@@ -96,7 +98,7 @@ Pack it into sideloader mod!
   yes and it's not my fault. blame ILLUSION
   
 - Do i have to change shader every sigle fucking time?
- 
+
   atm, yes. Expect me to make new hair shader replica or you can just keep doing it.
 
 ## Troubleshooting
