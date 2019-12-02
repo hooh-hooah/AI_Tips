@@ -27,19 +27,35 @@ Now you need to prepare your scene
 
 ### Test Hairs
 
-![image-20191203003152198](img\image-20191203003152198.png)
+![image-20191203003152198](img/image-20191203003152198.png)
 
 Place hair object and adjust and scale the hair mesh to fit on the head. You'll get where to put it when you get the example scenes.
 
 Example scenes contains 5 different example hairs. After setting up the mesh and objects on the head, you need to following things:
 
 - Set hair layer to 10 (A)
-- Setup CmpHair.cs
+- Setup [CmpHair.cs](https://raw.githubusercontent.com/hooh-hooah/AI_Tips/master/files/CmpHair.cs) (You will need [CmpBase.cs](https://raw.githubusercontent.com/hooh-hooah/AI_Tips/master/files/CmpBase.cs))
 - Setup DynamicBones (you can buy it or do something bad but I purchased one before.)
 
 ### Test Textures
 
-set texture has actual transparency in alpha.
+Set texture has actual transparency in alpha. You need to add nice texture in order to make it looks good. 
+
+You will need at least 3 following texture maps:
+
+- Diffuse (MainTexture)
+
+  Diffuse Texture must be black and white to give it more freedom of color.
+
+- Normal (NormalMap)
+
+  Normal map should not be excessive. Do not make colorful normal map. (You know what that means.)
+
+- Color Mask (ColorMask)
+
+  If you don't know what this is, just fill it flat red then you'll good.
+
+You can generate normal map from [this website](https://cpetry.github.io/NormalMap-Online/).
 
 ### Build Assetbundles
 
