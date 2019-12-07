@@ -17,11 +17,11 @@ don't forget to watch, star and share the repository to not miss further instruc
 
 If you setup your own modding project in unity editor then you need to import assets to get started. 
 
-You can get nice small prepared assets here.
+You can get nice small prepared assets [here](https://github.com/hooh-hooah/AI_Tips/tree/master/files).
 
 ### Prepare Scene
 
-Now you need to prepare your scene Export head mesh/object from the game and place it nicely to see what's going on in one glance. You can get my workspace from this repository.
+Now you need to prepare your scene Export head mesh/object from the game and place it nicely to see what's going on in one glance. You can get my workspace from this [location](https://github.com/hooh-hooah/AI_Tips/tree/master/files/workspace).
 
 ![](img/20191207100125753_Unity.png)
 
@@ -55,7 +55,7 @@ When you're done, import textures and make "Double-Sided" Material because the g
 
 ![](img/20191207103349117_Unity.png)
 
-- colormask: the colormask for your hair. I'll get to this later, If you don't know anything just make small plain red texture and call it colormask. you can download it here.
+- colormask: the colormask for your hair. I'll get to this later, If you don't know anything just make small plain red texture and call it colormask. you can download it [here](https://github.com/hooh-hooah/AI_Tips/blob/master/files/colormask.png).
 - diffuse: the main color of your hair. The hair shader will use this to determine your hair's opacity and look.
 - normal: bumpiness of the hair. do not use strong normal map. It will result ugly hair material in game.
 
@@ -85,7 +85,7 @@ Press change children when Unity Editor asks anything. Everything should be in C
 
 Once you've made your hair, you need to insert some information of your hair so game can parse it and use it In-Game. 
 
-You're going to use CmpHair component, which can be found here. You'll need CmpBase.cs to compile it properly. so put those things together.
+You're going to use CmpHair component, which can be found [here](https://github.com/hooh-hooah/AI_Tips/blob/master/files/CmpHair.cs). You'll need [CmpBase.cs](https://github.com/hooh-hooah/AI_Tips/blob/master/files/CmpBase.cs) to compile it properly. so put those things together.
 
 Add CmpHair on your Hair Object like this.
 
@@ -114,7 +114,7 @@ Not everything is necessary, but RendCheckVisible and RendHair is critical to dr
 
 If you have long hair, it's expected be affected by external force or gravity. there is a lot of way to do it, but I'm using ILLUSION's way - DynamicBones.
 
-DynamicBone is a Unity Asset can be purchased in here. You can do other things but I suggest you to buy it for the most stable experience with it.
+DynamicBone is a Unity Asset can be purchased in [here](https://assetstore.unity.com/packages/tools/animation/dynamic-bone-16743). *You can do other things* but I suggest you to purchase the plugin from the asset store for the most stable experience.
 
 Since it's really complicated I suggest you to experiment it with Play Mode first. You can set values in editor and see how they're moving in Play Mode by moving around your root head object.
 
@@ -144,7 +144,7 @@ Build Assetbundles, and move built assetbundles to nice place to remember.
 
 Once you're done
 
-We don't have hair shader replica atm, so we need to replace the shader to make it work nicely in game. I have example material .unity3d file in here (Click?)
+We don't have hair shader replica atm, so we need to replace the shader to make it work nicely in game. I have example material .unity3d file in [here](https://github.com/hooh-hooah/AI_Tips/blob/master/files/hair_material.unity3d)
 
 Follow this step.
 
