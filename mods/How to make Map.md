@@ -30,13 +30,13 @@ You can bake lightmaps and reflection probe, light probes to get extra good qual
 
 ##### Make Everything in Layer 11 (Map)
 
-![image-20200101044239224](images\image-20200101044239224.png)
+![image-20200101044239224](./images/image-20200101044239224.png)
 
 Everything should be in Layer 11 to get properly lighted in-game. 
 
 ### Save Scene
 
-![image-20200101044321024](D:\ggg\mods\images\image-20200101044321024.png)
+![image-20200101044321024](./images/image-20200101044321024.png)
 
 Save scene like this.
 
@@ -46,7 +46,7 @@ Make your own mod.xml. Here is [example](https://github.com/hooh-hooah/ModdingTo
 
 ### Build Mod
 
-![image-20200101043650642](images\image-20200101043650642.png)
+![image-20200101043650642](./images/image-20200101043650642.png)
 
 Specify Zipmod Destination and click build Map Mod.
 
