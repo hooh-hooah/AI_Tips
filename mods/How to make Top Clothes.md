@@ -73,6 +73,10 @@ Test your clothes working in-game.
 
 ### Trouble Shooting
 
+#### I can't build my mod!
+
+Check [here](https://github.com/hooh-hooah/ModdingTool#trouble-shooting)
+
 #### I can see my mod but it won't load when I click it
 
 This is mostly caused wrong setup of your game object.

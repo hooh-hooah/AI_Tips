@@ -60,7 +60,7 @@ Test your clothes working in-game.
 
 #### I can't build my mod!
 
-Check [here](https://github.com/hooh-hooah/ModdingTool/blob/master/Assets/%40MAPS/ExampleMap/mod.xml)
+Check [here](https://github.com/hooh-hooah/ModdingTool#trouble-shooting)
 
 #### I can't see my mod.
 
