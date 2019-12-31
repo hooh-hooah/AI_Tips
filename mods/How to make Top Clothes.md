@@ -14,7 +14,7 @@
 
 ### Prepare Mesh
 
-![](images\image-20200101042333269.png)
+![](./images/image-20200101042333269.png)
 
 Your mesh should meet following condition to be used for the game. (or you can use .blend file as template.)
 
@@ -33,7 +33,7 @@ Your mesh should meet following condition to be used for the game. (or you can u
 
 ### Setup GameObject
 
-![image-20200101043341537](images\image-20200101043341537.png)
+![image-20200101043341537](./images/image-20200101043341537.png)
 
 Open `character_scene.unity` in Modding Tool (it's opened by default.)
 
@@ -61,7 +61,7 @@ Make your own mod.xml. Here is [example](https://github.com/hooh-hooah/ModdingTo
 
 ### Build Mod
 
-![image-20200101043650642](images\image-20200101043650642.png)
+![image-20200101043650642](./images/image-20200101043650642.png)
 
 Specify Zipmod Destination and click build Female Clothes.
 
