@@ -60,7 +60,7 @@ Let's go with one button solution, Create Prefab from Selected Objects.
 
 Make your own mod.xml. Here is [example](https://github.com/hooh-hooah/ModdingTool/blob/master/Assets/%40MAPS/ExampleStudioItems/modbuilder/mod.xml)
 
-You can easily generate items and assets list with Element Generator and put them in like an example above.
+You can easily generate items and assets list with Element Generator and put them in like an example above. The result will be generated in generated.txt
 
 ![image-20200101045735600](./images/image-20200101045735600.png)
 
