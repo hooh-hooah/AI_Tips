@@ -14,7 +14,7 @@
 
 ### Prepare Scene
 
-![image-20200101043939311](images\image-20200101043939311.png)
+![image-20200101043939311](./images/image-20200101043939311.png)
 
 ##### Add Scale to measure the map's size.
 
