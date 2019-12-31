@@ -22,13 +22,19 @@
 
 ##### Adjust Transform
 
+Everything should be in Position 0,0,0 and since AI shoujo's scale is weirdly big so you need to scale it about 5-9 times larger than original. Check `Asset/Character Scale Measurement` to check the size of your asset.
+
 ![image-20200101045057896](./images/image-20200101045057896.png)
 
-##### Go to folder to Contain mod.xml 
+##### Go to folder to make mod.xml 
 
 ![image-20200101045148819](./images/image-20200101045148819.png)
 
 ##### Process GameObject
+
+Root gameobject should be Position 0,0,0 and Rotation 0,0,0 and Scale 1,1,1 or the scaling will not get applied
+
+Wrapping gameobject will be pain in the ass if you do that all by hands so we'll use tool's feature, Wrap Object with new GameObject.
 
 ![image-20200101045206224](./images/image-20200101045206224.png)
 
@@ -41,6 +47,10 @@
 Everything should be in Layer 11 to get properly lighted in-game. 
 
 ### Register as Prefab
+
+You can register prefabs by drag and drop but that will be so annoying to do.
+
+Let's go with one button solution, Create Prefab from Selected Objects.
 
 ![image-20200101045308402](./images/image-20200101045308402.png)
 
