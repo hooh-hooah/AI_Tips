@@ -148,7 +148,9 @@ You can test how texture will affect the shading and what you can do by changing
 
 ![image-20200104215858554](./images/image-20200104215858554.png)
 
-Just click it. 
+Specify Zipmod Destination and click build hairs.
+
+Remember, you need to install Bandizip in C: Drive at this moment to pack zipmods. I will change this later.
 
 ## FAQ
 
