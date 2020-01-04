@@ -45,6 +45,10 @@ After that, hit Initialize Clothes.
 
 #### ColorMask
 
+![image-20200104175506932](./images/image-20200104175506932.png)
+
+![image-20200104175801808](./images/image-20200104175801808.png)
+
 Colormask currently works like this:
 
 |       | Color         | Name         | Description                              |
