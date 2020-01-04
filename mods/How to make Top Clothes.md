@@ -43,13 +43,17 @@ After that, hit Initialize Clothes.
 
 ### Adjust Textures
 
-Make your textures. 
+#### ColorMask
 
-Colormask works like this:
+Colormask currently works like this:
 
-- Red: Color 2
-- Green: Color 3
-- Blue: Color 4 (almost unused) 
+|       | Color         | Name         | Description                              |
+| ----- | ------------- | ------------ | ---------------------------------------- |
+| BLACK | (0, 0, 0)     | Color 1      | Where Color 1 Applied                    |
+| RED   | (255, 0, 0)   | Color 2      | Where Color 2 Applied                    |
+| GREEN | (0, 255, 0)   | Color 3      | Where Color 3 Applied                    |
+| BLUE  | (0, 0, 255)   | Color 4      | Where Color 4 Applied                    |
+| A     | (X, X,X, 255) | Pattern Mask | Where UV Pattern will appear on texture. |
 
 ### Register Prefab
 
