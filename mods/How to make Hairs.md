@@ -126,11 +126,24 @@ Check if your DynamicBone is working or not in **PLAY MODE**. <u>You cannot chec
 
 Click your hair mesh and click Initialize Hair. 
 
+It will setup everything hair related components automatically. Dynamic bones are also automatically added to the Gameobject. Be sure your bones are following name convention in order to automatically add everything.
+
+```
+Correct bone name and structure.
+hair_top
+   └ back_s
+      └ ... child bones
+   └ front_s
+      └ ... child bones
+   └ side_s
+      └ ... child bones
+```
+
 ![image-20200104214723585](./images/image-20200104214723585.png)
 
 ![image-20200104214747357](./images/image-20200104214747357.png)
 
-Then Everything will setup automatically. If you can see things like this, it's working so you don't have to worry about it. just make sure of few things like:
+If you can see things like this, it's working so you don't have to worry about it. just make sure of few things like:
 
 1. If RendCheckVisible and RendHair has more than 0 Size?
 2. Is your hair object is in layer 'Chara'?
