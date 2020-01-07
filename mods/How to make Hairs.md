@@ -21,19 +21,17 @@ don't forget to watch, star and share the repository to not miss further instruc
 
 ![image-20200104213432749](./images/image-20200104213432749.png)
 
-[1] Prepared Asset - Rigged Hair
+#### Prepared Asset - Rigged Hair
 
 ![image-20200104213457204](./images/image-20200104213457204.png)
 
-[2] Prepared Asset - Properly setup UV for hooh's Hair Texture. (Optional)
+#### Prepared Asset - Properly setup UV for hooh's Hair Texture. (Optional)
 
 After then, prepare some nice mesh to put on. You can use any 3d editing tool. The minimum requirement for the hair object is a bone and a mesh.
 
 If you want to make your hair move then you need to add more then 2 bones. also, the more bone is the more smooth it feels. 
 
 I'm not going to explain the basic of 3D modeling here. you can go Youtube to search some nice infromations about how to use 3D software. You'll need to learn following things: basic mesh editing, culling, basic setup, vertex weighting, rigging.
-
-
 
 [!] WARNING [!]
 
@@ -62,6 +60,24 @@ Hair mod requires 5 essential textures.
    Ambient Occlusion texture for hair. Just make white texture if you don't know what to do.
 
 Do NOT rename texture's name (you can rename extensions) or it will fail to build!
+
+#### Properly name bones
+
+Please follow the bone naming convention to make tool detect target bones and setup dynamic bones and other stuffs automatically. 
+
+Root bone should be `***_top`, branch bones should be `***_s`.
+
+It will looks like this
+
+```
+hair_top
+   └ back_s
+      └ ... child bones
+   └ front_s
+      └ ... child bones
+   └ side_s
+      └ ... child bones
+```
 
 ### Prepare Scenes
 
