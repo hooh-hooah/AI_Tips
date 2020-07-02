@@ -1,8 +1,8 @@
 # How to preview Hair Material in Unity Editor
 ## Requirement
-Unity 2018.4.11
-Eyes
-Eyesockets
+- Unity 2018.4.11
+- Eyes
+- Eyesockets
 
 ## Steps
 ![](./imgs/hairpreview.png)
