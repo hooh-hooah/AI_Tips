@@ -49,7 +49,7 @@ here is some example
     <guid>example.clothing.text</guid> <!-- please change guid! -->
     <name>Example CLothing</name>
     <version>1.0.0</version>
-    <author>hooh</author>
+    <author>My Name</author>
     <description>My first outfit mod</description>
     <bundles>
         <folder auto-path="prefabs" from="tex" filter=".*?\.(psd|png|tif|prefab)"/>
@@ -83,13 +83,17 @@ for detailed information what to put with `<item>` check [**XML List Types**](te
 
 ![](imgs/mod_00.png)
 
-drag and drop your mod.xml file into mod builder
+Drag and drop your custom mod XML file into the mod builder's target window.
 
-check output destination
+After setting the build target, check if the output path is where you desire to put your custom zipmod archive.
 
-validate your xml file with dry run
+If everything is okay, validate your XML file if you didn't make any mistake inside the XML file.
 
-after validating the mod, press build mod to build the mod
+Unless a mod packer cannot find an asset or has some issue while resolving the Asset Bundle's path, it says nothing.
+
+Then you're good to go. Press the big green button and to build the mod.
+
+It depends on your mod size, but it will play a nice sound to notify the packing is done after a few seconds or minutes.
 
 ### Test In-Game
 
@@ -99,4 +103,4 @@ I recommend 2155x's makersearch to save your time
 
 ### Trouble Shooting
 
-if you have any problem then go read [**Trouble Shooting**](tutorials/trouble-shooting.md) document
+!> If you can't find the issue in here then check [**Trouble Shooting**](tutorials/trouble-shooting.md) page.

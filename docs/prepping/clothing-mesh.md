@@ -186,6 +186,8 @@ once you attached the mesh to the character you don't have to attach it again un
 
 ## Trouble Shooting
 
+!> If you can't find the issue in here then check [**Trouble Shooting**](tutorials/trouble-shooting.md) page.
+
 ### Mesh is not following the character
 
 check if renderer is skinned mesh renderer if not youre boned

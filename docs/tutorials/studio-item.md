@@ -13,9 +13,6 @@ If you need more basic information like setup folders or preparing hair assets, 
 
 Follow this if you're diagnosed to live for 60 seconds.
 
--   Make a folder
--   Right Click and Select "Create > Template Mod XML File"
--   Make "prefabs", "assets" folder
 -   Put your 3d models and textures inside of assets
 -   Drag the model and adjust the materials and stuff
 -   Combine the things you want to import into the game in one GameObject
@@ -26,6 +23,26 @@ Follow this if you're diagnosed to live for 60 seconds.
 -   Drag mod.xml to the mod builder
 -   Press Build Mod
 -   Good, you're done
+
+### Build Mod
+
+![](imgs/mod_00.png)
+
+Drag and drop your custom mod XML file into the mod builder's target window.
+
+After setting the build target, check if the output path is where you desire to put your custom zipmod archive.
+
+If everything is okay, validate your XML file if you didn't make any mistake inside the XML file.
+
+Unless a mod packer cannot find an asset or has some issue while resolving the Asset Bundle's path, it says nothing.
+
+Then you're good to go. Press the big green button and to build the mod.
+
+It depends on your mod size, but it will play a nice sound to notify the packing is done after a few seconds or minutes.
+
+### Trouble Shooting
+
+!> If you can't find the issue in here then check [**Trouble Shooting**](tutorials/trouble-shooting.md) page.
 
 ## Field Manual
 

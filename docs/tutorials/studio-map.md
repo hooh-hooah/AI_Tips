@@ -45,15 +45,55 @@ Save scene like this.
 
 ### Make mod.xml
 
-Make your own mod.xml. Here is [example](https://github.com/hooh-hooah/ModdingTool/blob/master/Assets/%40MAPS/ExampleMap/mod.xml)
+Make your own mod.xml.
+
+here is some example
+
+```xml
+<packer>
+    <guid>example.studio.map</guid>
+    <name>My First Studio Map</name>
+    <version>1.0.0</version>
+    <author>My Name</author>
+    <description>My first outfit mod</description>
+    <options>
+         <!--
+            If you're planning to release studio items with the map,
+            I recommend you to put use-dependency on option for more
+            perfomance and smaller size of zipmod.
+          -->
+          <use-dependency />
+    </options>
+    <bundles>
+        <folder auto-path="maps" from="map00" filter=".*\.unity" target="map00" />
+    </bundles>
+    <build>
+        <list type="map">
+            <item name="My First Studio Map" scene="map_00" />
+        </list>
+    </build>
+</packer>
+```
+
+for detailed information about xml check [**XML File Structure**](technical/xml-file.md) document
+
+for detailed information what to put with `<item>` check [**XML List Types**](technical/category-list.md) document
 
 ### Build Mod
 
-![image-20200101043650642](images/image-20200101043650642.png)
+![](imgs/mod_00.png)
 
-Specify Zipmod Destination and click build Map Mod.
+Drag and drop your custom mod XML file into the mod builder's target window.
 
-Remember, you need to install [Bandizip](https://kr.bandisoft.com/bandizip/) in C: Drive at this moment to pack zipmods. I will change this later.
+After setting the build target, check if the output path is where you desire to put your custom zipmod archive.
+
+If everything is okay, validate your XML file if you didn't make any mistake inside the XML file.
+
+Unless a mod packer cannot find an asset or has some issue while resolving the Asset Bundle's path, it says nothing.
+
+Then you're good to go. Press the big green button and to build the mod.
+
+It depends on your mod size, but it will play a nice sound to notify the packing is done after a few seconds or minutes.
 
 ### Test In-Game
 
@@ -61,17 +101,7 @@ Test your clothes working in-game.
 
 ### Trouble Shooting
 
-#### I can't build my mod!
-
-Check [here](https://github.com/hooh-hooah/ModdingTool#trouble-shooting)
-
-#### I can't see my mod.
-
-Check if your id and name is properly named.
-
-#### I can't see my map!
-
-Check if unity bundle is properly built.
+!> If you can't find the issue in here then check [**Trouble Shooting**](tutorials/trouble-shooting.md) page.
 
 #### My map is kinda weirdly placed.
 
