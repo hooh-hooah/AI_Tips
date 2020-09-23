@@ -1,20 +1,23 @@
-# How to make Map
+# Making Studio Map Tutorial
 
-## Basic Requirement
+## Related Document
 
-- Nice above-average IQ
-- basic knowledge of 3D Modeling
-- basic knowledge of Unity Editor
-- 3D Tools like blender or 3dsmax
-- Untiy Editor 2018.2.21f
-- Photoshop or GIMP
-- [hooh Modding Tool Project](https://github.com/hooh-hooah/ModdingTool)
+This page only contains how to put hair models into the game with adjustable attributes.
+
+If you need more basic information like setup folders or preparing hair assets, please visit the pages below before continuing to read this document:
+
+-   [Getting Started with the hooh's Modding Tool](getting_started.md)
+-   [Setting up Folder](tutorials/gearing-up.md)
+
+## Table of Content
+
+1. [Prepare Scene](#Prepare Scene)
 
 ## Steps
 
 ### Prepare Scene
 
-![image-20200101043939311](./images/image-20200101043939311.png)
+![image-20200101043939311](images/image-20200101043939311.png)
 
 ##### Add Scale to measure the map's size.
 
@@ -30,13 +33,13 @@ You can bake lightmaps and reflection probe, light probes to get extra good qual
 
 ##### Make Everything in Layer 11 (Map)
 
-![image-20200101044239224](./images/image-20200101044239224.png)
+![image-20200101044239224](images/image-20200101044239224.png)
 
-Everything should be in Layer 11 to get properly lighted in-game. 
+Everything should be in Layer 11 to get properly lighted in-game.
 
 ### Save Scene
 
-![image-20200101044321024](./images/image-20200101044321024.png)
+![image-20200101044321024](images/image-20200101044321024.png)
 
 Save scene like this.
 
@@ -46,7 +49,7 @@ Make your own mod.xml. Here is [example](https://github.com/hooh-hooah/ModdingTo
 
 ### Build Mod
 
-![image-20200101043650642](./images/image-20200101043650642.png)
+![image-20200101043650642](images/image-20200101043650642.png)
 
 Specify Zipmod Destination and click build Map Mod.
 
@@ -64,7 +67,7 @@ Check [here](https://github.com/hooh-hooah/ModdingTool#trouble-shooting)
 
 #### I can't see my mod.
 
-Check if your id and name is properly named. 
+Check if your id and name is properly named.
 
 #### I can't see my map!
 

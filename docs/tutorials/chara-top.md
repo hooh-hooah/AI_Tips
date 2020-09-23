@@ -1,20 +1,18 @@
 # How to make Top Clothes
 
-## Basic Requirement
+## Related Document
 
-- Nice above-average IQ
-- basic knowledge of 3D Modeling
-- basic knowledge of Unity Editor
-- 3D Tools like blender or 3dsmax
-- Untiy Editor 2018.2.21f
-- Photoshop or GIMP
-- [hooh Modding Tool Project](https://github.com/hooh-hooah/ModdingTool)
+This page only contains how to put hair models into the game with adjustable attributes.
 
-## Steps
+If you need more basic information like setup folders or preparing hair assets, please visit the pages below before continuing to read this document:
+
+-   [Getting Started with the hooh's Modding Tool](getting_started.md)
+
+-   [Setting up Folder](tutorials/gearing-up.md)
 
 ### Prepare Mesh
 
-![](./images/image-20200101042333269.png)
+![](images/image-20200101042333269.png)
 
 Your mesh should meet following condition to be used for the game. (or you can use .blend file as template.)
 
@@ -23,21 +21,21 @@ Your mesh should meet following condition to be used for the game. (or you can u
 3. you need to export fbx as "clothmesh.fbx" (hooh Modding tool automatically converts mesh into AI-Compatible Mode)
 4. you need to export "FBX ALL" Scale
 5. the file should have one or two pairs of state meshes (the name can't be changed or you have to manually assign meshes.)
-   - Pair Bottom
-     - n_bot_a : Clothing Bottom - Clothed state
-     - n_bot_b : Clothing Bottom - Half state
-   - Pair Top
-     - n_top_a : Clothing Top - Clothed state
-     - n_top_b : Clothing Top - Half State
+    - Pair Bottom
+        - n_bot_a : Clothing Bottom - Clothed state
+        - n_bot_b : Clothing Bottom - Half state
+    - Pair Top
+        - n_top_a : Clothing Top - Clothed state
+        - n_top_b : Clothing Top - Half State
 6. The fbx should only have mesh and bones but nothing else. (as you can see, I only exported selected objects. bones and clothing meshes.)
 
 ### Setup GameObject
 
-![image-20200101043341537](./images/image-20200101043341537.png)
+![image-20200101043341537](images/image-20200101043341537.png)
 
 Open `character_scene.unity` in Modding Tool (it's opened by default.)
 
-Drag your clothemesh.fbx to body_example and see if the mesh fits. 
+Drag your clothemesh.fbx to body_example and see if the mesh fits.
 
 After that, hit Initialize Clothes.
 
@@ -45,9 +43,9 @@ After that, hit Initialize Clothes.
 
 #### ColorMask
 
-![image-20200104175506932](./images/image-20200104175506932.png)
+![image-20200104175506932](images/image-20200104175506932.png)
 
-![image-20200104175801808](./images/image-20200104175801808.png)
+![image-20200104175801808](images/image-20200104175801808.png)
 
 Colormask currently works like this:
 
@@ -69,7 +67,7 @@ Make your own mod.xml. Here is [example](https://github.com/hooh-hooah/ModdingTo
 
 ### Build Mod
 
-![image-20200101043650642](./images/image-20200101043650642.png)
+![image-20200101043650642](images/image-20200101043650642.png)
 
 Specify Zipmod Destination and click build Female Clothes.
 
@@ -89,12 +87,12 @@ Check [here](https://github.com/hooh-hooah/ModdingTool#trouble-shooting)
 
 This is mostly caused wrong setup of your game object.
 
-1. The clothes does not have CmpComponents. 
+1. The clothes does not have CmpComponents.
 
-   You can initialize most of things by clicking Initialize xxxx
+    You can initialize most of things by clicking Initialize xxxx
 
 2. You forgot something
 
-   Do your clothes scaled properly? Everything should be 1.
+    Do your clothes scaled properly? Everything should be 1.
 
-   Do your gameobject has mesh renderers?
+    Do your gameobject has mesh renderers?
