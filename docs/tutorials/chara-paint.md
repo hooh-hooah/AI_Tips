@@ -54,3 +54,7 @@ You need to remember that guid, bundle name, build name should be **unique** and
 ### Pack and Test
 
 Unfortunately, There is no preview tools yet. but since this is just pack of texture, it won't be that messy to work on.
+
+### Trouble Shooting
+
+if you have any problem then go read [**Trouble Shooting**](tutorials/trouble-shooting.md) document

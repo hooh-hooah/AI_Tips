@@ -3,521 +3,870 @@
 ?> Most of them work, there might be edge case that I couldn't tested.
 
 ## All Possible Studio Category List
+
+### Big Category
+
 ```xml
-<list type="<<INSERT LIST CATEGORY KEY HERE>>">
-	<item .... />
-    ...
+<list type="bigcategory">
+  <item id="number" name="category name">
 </list>
 ```
-### Big Category
-* Key Name: `bigcategory`
-* Description: Character Category Slot
-* Required Keys
-    * Key Name:
-      Description: 
-      Example:
+
+-   Key Name: `bigcategory`
+-   Description: Character Category Slot
+-   Key List
+
+    -   `id`: id of Big Category
+
+        must be unique to all game
+
+    -   `name`: The name of Big Category
 
 ### Mid Category
-* Key Name: `midcategory`
-* Description: Character Category Slot
-* Required Keys
-    * Key Name:
-      Description: 
-      Example:
+
+```xml
+<list type="midcategory">
+  <item big-category="number" id="number" name="category name">
+</list>
+```
+
+-   Key Name: `midcategory`
+-   Description: Character Category Slot
+-   Key List
+
+    -   `id`: id of Mid Category
+
+        must be unique to all game
+
+    -   `big-category`: id of Big Category
+
+    -   `name`: The name of Mid Category
 
 ### Studio Item
-* Key Name: `studioitem` or `props`
-* Description: Character Category Slot
-* Required Keys
-    * Key Name:
-      Description: 
-      Example:
+
+```xml
+<list type="props">
+  <item big-category="number" mid-category="number" name="name" object="prefab's name">
+</list>
+```
+
+-   Key Name: `studioitem` or `props`
+-   Description: Character Category Slot
+-   Key List
+    -   `big-category`: The ID of Animation Big Category
+    -   `mid-category`: The ID of Animation Mid Category
+    -   `name`: The name of the animation
+    -   `manifest`: (Automatically Resolved by default) the manifest name of the item
+    -   `id`: (Automatically Resolved by default) the id of the item
+    -   `object-bundle`: (Automatically Resolved by default) The path to the bundle where `object` is stored.
+    -   `object`: The prefab's name
 
 ### Studio Map
-* Key Name: `mhead`
-* Description: Character Category Slot
-* Required Keys
-    * Key Name:
-      Description: 
-      Example:
+
+```xml
+<list type="mhead">
+  <item key="value">
+</list>
+```
+
+-   Key Name: `mhead`
+-   Description: Character Category Slot
+-   Key List
+    -   `id`: description
 
 ### Animation Big Category
-* Key Name: `animebigcategory` or `animationbigcategory`
-* Description: Character Category Slot
-* Required Keys
-    * Key Name:
-      Description: 
-      Example:
+
+```xml
+<list type="animebigcategory">
+  <item id="number" name="category name">
+</list>
+... or ...
+<list type="animationmidcategory">
+  <item id="number" name="category name">
+</list>
+```
+
+-   Key Name: `animebigcategory` or `animationbigcategory`
+-   Description: Character Category Slot
+-   Key List
+
+    -   `id`: id of Animation Big Category
+
+        must be unique to all game
+
+    -   `name`: The name of Animation Big Category
 
 ### Animation Small Category
-* Key Name: `animemidcategory` or `animationmidcategory`
-* Description: Character Category Slot
-* Required Keys
-    * Key Name:
-      Description: 
-      Example:
+
+```xml
+<list type="animemidcategory">
+    <item id="number" name="category name">
+</list>
+... or ...
+<list type="animationmidcategory">
+    <item id="number" name="category name">
+</list>
+```
+
+-   Key Name: `animemidcategory` or `animationmidcategory`
+-   Description: Character Category Slot
+-   Key List
+
+    -   `id`: id of Animation Mid Category
+
+        must be unique to sideloader GUID
+
+    -   `name`: The name of Animation Mid Category
 
 ### Animation
-* Key Name: `anime` or `animation`
-* Description: Character Category Slot
-* Required Keys
-    * Key Name:
-      Description: 
-      Example:
+
+```xml
+<list type="animation">
+  <item
+    big-category="big category id*" mid-category="mid category id"
+    name="name" anime-controller="animation controller asset"
+    anime="state inside of animator controller asset"
+    />
+</list>
+```
+
+-   Key Name: `anime` or `animation`
+-   Description: Character Category Slot
+-   Key List
+
+    -   `big-category`: The ID of Animation Big Category
+
+    -   `mid-category`: The ID of Animation Mid Category
+    -   `name`: The name of the animation
+    -   `anime-controller`: The [Animator Controller](https://docs.unity3d.com/Manual/class-AnimatorController.html) asset name
+    -   `anime`: The state name inside of animator controller
 
 ## All Possible Character Category List
 
+### Male Head
+
 ```xml
-<list type="<<INSERT LIST CATEGORY KEY HERE>>">
-	<item .... />
-    ...
+<list type="mhead">
+  <item key="value">
 </list>
 ```
-### Male Head
-* Key Name: `mhead`
-* Description: Character Category Slot
-* Required Keys
-    * Key Name:
-      Description: 
-      Example:
-      
+
+-   Key Name: `mhead`
+-   Description: Character Category Slot
+-   Key List
+    -   `id`: description
+
 ### Male Face Skin
-* Key Name: `mskinf`
-* Description: Character Category Slot
-* Required Keys
-    * Key Name:
-      Description: 
-      Example:
-      
+
+```xml
+<list type="mskinf">
+  <item key="value">
+</list>
+```
+
+-   Key Name: `mskinf`
+-   Description: Character Category Slot
+-   Key List
+    -   `id`: description
+
 ### Male Face Detail
-* Key Name: `mdetailf`
-* Description: Character Category Slot
-* Required Keys
-    * Key Name:
-      Description: 
-      Example:
-      
+
+```xml
+<list type="mdetailf">
+  <item key="value">
+</list>
+```
+
+-   Key Name: `mdetailf`
+-   Description: Character Category Slot
+-   Key List
+    -   `id`: description
+
 ### Male Beard Texture
-* Key Name: `mbeard`
-* Description: Character Category Slot
-* Required Keys
-    * Key Name:
-      Description: 
-      Example:
-      
+
+```xml
+<list type="mbeard">
+  <item key="value">
+</list>
+```
+
+-   Key Name: `mbeard`
+-   Description: Character Category Slot
+-   Key List
+    -   `id`: description
+
 ### Male Body Skin
-* Key Name: `mskinb`
-* Description: Character Category Slot
-* Required Keys
-    * Key Name:
-      Description: 
-      Example:
-      
+
+```xml
+<list type="mskinb">
+  <item key="value">
+</list>
+```
+
+-   Key Name: `mskinb`
+-   Description: Character Category Slot
+-   Key List
+    -   `id`: description
+
 ### Male Body Detail
-* Key Name: `mdetailb`
-* Description: Character Category Slot
-* Required Keys
-    * Key Name:
-      Description: 
-      Example:
-      
+
+```xml
+<list type="mdetailb">
+  <item key="value">
+</list>
+```
+
+-   Key Name: `mdetailb`
+-   Description: Character Category Slot
+-   Key List
+    -   `id`: description
+
 ### Male Sunburn
-* Key Name: `msunburn`
-* Description: Character Category Slot
-* Required Keys
-    * Key Name:
-      Description: 
-      Example:
-      
+
+```xml
+<list type="msunburn">
+  <item key="value">
+</list>
+```
+
+-   Key Name: `msunburn`
+-   Description: Character Category Slot
+-   Key List
+    -   `id`: description
+
 ### Male Top
-* Key Name: `mtop`
-* Description: Character Category Slot
-* Required Keys
-    * Key Name:
-      Description: 
-      Example:
-      
+
+```xml
+<list type="mtop">
+  <item key="value">
+</list>
+```
+
+-   Key Name: `mtop`
+-   Description: Character Category Slot
+-   Key List
+    -   `id`: description
+
 ### Male Bottom
-* Key Name: `mbottom`
-* Description: Character Category Slot
-* Required Keys
-    * Key Name:
-      Description: 
-      Example:
-      
-### Male Gloves 
-* Key Name: `mgloves`
-* Description: Character Category Slot
-* Required Keys
-    * Key Name:
-      Description: 
-      Example:
-      
-### Male Shoes 
-* Key Name: `mshoes`
-* Description: Character Category Slot
-* Required Keys
-    * Key Name:
-      Description: 
-      Example:
-      
+
+```xml
+<list type="mbottom">
+  <item key="value">
+</list>
+```
+
+-   Key Name: `mbottom`
+-   Description: Character Category Slot
+-   Key List
+    -   `id`: description
+
+### Male Gloves
+
+```xml
+<list type="mgloves">
+  <item key="value">
+</list>
+```
+
+-   Key Name: `mgloves`
+-   Description: Character Category Slot
+-   Key List
+    -   `id`: description
+
+### Male Shoes
+
+```xml
+<list type="mshoes">
+  <item key="value">
+</list>
+```
+
+-   Key Name: `mshoes`
+-   Description: Character Category Slot
+-   Key List
+    -   `id`: description
+
 ### Female Head
-* Key Name: `fhead`
-* Description: Character Category Slot
-* Required Keys
-    * Key Name:
-      Description: 
-      Example:
-      
+
+```xml
+<list type="fhead">
+  <item key="value">
+</list>
+```
+
+-   Key Name: `fhead`
+-   Description: Character Category Slot
+-   Key List
+    -   `id`: description
+
 ### Female Face Skin
-* Key Name: `fskinf`
-* Description: Character Category Slot
-* Required Keys
-    * Key Name:
-      Description: 
-      Example:
-      
+
+```xml
+<list type="fskinf">
+  <item key="value">
+</list>
+```
+
+-   Key Name: `fskinf`
+-   Description: Character Category Slot
+-   Key List
+    -   `id`: description
+
 ### Female Face Detail
-* Key Name: `fdetailf`
-* Description: Character Category Slot
-* Required Keys
-    * Key Name:
-      Description: 
-      Example:
-      
+
+```xml
+<list type="fdetailf">
+  <item key="value">
+</list>
+```
+
+-   Key Name: `fdetailf`
+-   Description: Character Category Slot
+-   Key List
+    -   `id`: description
+
 ### Female Body Skin
-* Key Name: `fskinb`
-* Description: Character Category Slot
-* Required Keys
-    * Key Name:
-      Description: 
-      Example:
-      
+
+```xml
+<list type="fskinb">
+  <item key="value">
+</list>
+```
+
+-   Key Name: `fskinb`
+-   Description: Character Category Slot
+-   Key List
+    -   `id`: description
+
 ### Female Body Detail
-* Key Name: `fdetailb`
-* Description: Character Category Slot
-* Required Keys
-    * Key Name:
-      Description: 
-      Example:
-      
+
+```xml
+<list type="fdetailb">
+  <item key="value">
+</list>
+```
+
+-   Key Name: `fdetailb`
+-   Description: Character Category Slot
+-   Key List
+    -   `id`: description
+
 ### Female Sun Burn
-* Key Name: `fsunburn`
-* Description: Character Category Slot
-* Required Keys
-    * Key Name:
-      Description: 
-      Example:
-      
+
+```xml
+<list type="fsunburn">
+  <item key="value">
+</list>
+```
+
+-   Key Name: `fsunburn`
+-   Description: Character Category Slot
+-   Key List
+    -   `id`: description
+
 ### Female Top
-* Key Name: `ftop`
-* Description: Character Category Slot
-* Required Keys
-    * Key Name:
-      Description: 
-      Example:
-      
+
+```xml
+<list type="ftop">
+  <item key="value">
+</list>
+```
+
+-   Key Name: `ftop`
+-   Description: Character Category Slot
+-   Key List
+    -   `id`: description
+
 ### Female Bottom Clothing
-* Key Name: `fbottom`
-* Description: Character Category Slot
-* Required Keys
-    * Key Name:
-      Description: 
-      Example:
-      
+
+```xml
+<list type="fbottom">
+  <item key="value">
+</list>
+```
+
+-   Key Name: `fbottom`
+-   Description: Character Category Slot
+-   Key List
+    -   `id`: description
+
 ### Female Inner Top
-* Key Name: `fintop`
-* Description: Character Category Slot
-* Required Keys
-    * Key Name:
-      Description: 
-      Example:
-      
+
+```xml
+<list type="fintop">
+  <item key="value">
+</list>
+```
+
+-   Key Name: `fintop`
+-   Description: Character Category Slot
+-   Key List
+    -   `id`: description
+
 ### Female Inner Bottom
-* Key Name: `finbottom`
-* Description: Character Category Slot
-* Required Keys
-    * Key Name:
-      Description: 
-      Example:
-      
+
+```xml
+<list type="finbottom">
+  <item key="value">
+</list>
+```
+
+-   Key Name: `finbottom`
+-   Description: Character Category Slot
+-   Key List
+    -   `id`: description
+
 ### Female Gloves
-* Key Name: `fgloves`
-* Description: Character Category Slot
-* Required Keys
-    * Key Name:
-      Description: 
-      Example:
-      
+
+```xml
+<list type="fgloves">
+  <item key="value">
+</list>
+```
+
+-   Key Name: `fgloves`
+-   Description: Character Category Slot
+-   Key List
+    -   `id`: description
+
 ### Female Pantyhose
-* Key Name: `fpanst`
-* Description: Character Category Slot
-* Required Keys
-    * Key Name:
-      Description: 
-      Example:
-      
+
+```xml
+<list type="fpanst">
+  <item key="value">
+</list>
+```
+
+-   Key Name: `fpanst`
+-   Description: Character Category Slot
+-   Key List
+    -   `id`: description
+
 ### Female Socks
-* Key Name: `fsocks`
-* Description: Character Category Slot
-* Required Keys
-    * Key Name:
-      Description: 
-      Example:
-      
+
+```xml
+<list type="fsocks">
+  <item key="value">
+</list>
+```
+
+-   Key Name: `fsocks`
+-   Description: Character Category Slot
+-   Key List
+    -   `id`: description
+
 ### Female Shoes
-* Key Name: `fshoes`
-* Description: Character Category Slot
-* Required Keys
-    * Key Name:
-      Description: 
-      Example:
-      
+
+```xml
+<list type="fshoes">
+  <item key="value">
+</list>
+```
+
+-   Key Name: `fshoes`
+-   Description: Character Category Slot
+-   Key List
+    -   `id`: description
+
 ### Common Skin Paint
-* Key Name: `spaint`
-* Description: Character Category Slot
-* Required Keys
-    * Key Name:
-      Description: 
-      Example:
-      
+
+```xml
+<list type="spaint">
+  <item key="value">
+</list>
+```
+
+-   Key Name: `spaint`
+-   Description: Character Category Slot
+-   Key List
+    -   `id`: description
+
 ### Common Eyebrows
-* Key Name: `seyebrow`
-* Description: Character Category Slot
-* Required Keys
-    * Key Name:
-      Description: 
-      Example:
-      
+
+```xml
+<list type="seyebrow">
+  <item key="value">
+</list>
+```
+
+-   Key Name: `seyebrow`
+-   Description: Character Category Slot
+-   Key List
+    -   `id`: description
+
 ### Common Eyelash
-* Key Name: `seyelash`
-* Description: Character Category Slot
-* Required Keys
-    * Key Name:
-      Description: 
-      Example:
-      
+
+```xml
+<list type="seyelash">
+  <item key="value">
+</list>
+```
+
+-   Key Name: `seyelash`
+-   Description: Character Category Slot
+-   Key List
+    -   `id`: description
+
 ### Common Eyeshadow
-* Key Name: `seyeshadow`
-* Description: Character Category Slot
-* Required Keys
-    * Key Name:
-      Description: 
-      Example:
-      
-### Common Eye 
-* Key Name: `seye`
-* Description: Character Category Slot
-* Required Keys
-    * Key Name:
-      Description: 
-      Example:
-      
+
+```xml
+<list type="seyeshadow">
+  <item key="value">
+</list>
+```
+
+-   Key Name: `seyeshadow`
+-   Description: Character Category Slot
+-   Key List
+    -   `id`: description
+
+### Common Eye
+
+```xml
+<list type="seye">
+  <item key="value">
+</list>
+```
+
+-   Key Name: `seye`
+-   Description: Character Category Slot
+-   Key List
+    -   `id`: description
+
 ### Common Eye Black
-* Key Name: `seyeblack`
-* Description: Character Category Slot
-* Required Keys
-    * Key Name:
-      Description: 
-      Example:
-      
+
+```xml
+<list type="seyeblack">
+  <item key="value">
+</list>
+```
+
+-   Key Name: `seyeblack`
+-   Description: Character Category Slot
+-   Key List
+    -   `id`: description
+
 ### Common Eye Highlights
-* Key Name: `seye_hl`
-* Description: Character Category Slot
-* Required Keys
-    * Key Name:
-      Description: 
-      Example:
-      
+
+```xml
+<list type="seye_hl">
+  <item key="value">
+</list>
+```
+
+-   Key Name: `seye_hl`
+-   Description: Character Category Slot
+-   Key List
+    -   `id`: description
+
 ### Common Cheek Red
-* Key Name: `scheek`
-* Description: Character Category Slot
-* Required Keys
-    * Key Name:
-      Description: 
-      Example:
-      
+
+```xml
+<list type="scheek">
+  <item key="value">
+</list>
+```
+
+-   Key Name: `scheek`
+-   Description: Character Category Slot
+-   Key List
+    -   `id`: description
+
 ### Common Lip Tint
-* Key Name: `slip`
-* Description: Character Category Slot
-* Required Keys
-    * Key Name:
-      Description: 
-      Example:
-      
+
+```xml
+<list type="slip">
+  <item key="value">
+</list>
+```
+
+-   Key Name: `slip`
+-   Description: Character Category Slot
+-   Key List
+    -   `id`: description
+
 ### Common Mole
-* Key Name: `smole`
-* Description: Character Category Slot
-* Required Keys
-    * Key Name:
-      Description: 
-      Example:
-      
+
+```xml
+<list type="smole">
+  <item key="value">
+</list>
+```
+
+-   Key Name: `smole`
+-   Description: Character Category Slot
+-   Key List
+    -   `id`: description
+
 ### Common Nipple
-* Key Name: `snip`
-* Description: Character Category Slot
-* Required Keys
-    * Key Name:
-      Description: 
-      Example:
-      
+
+```xml
+<list type="snip">
+  <item key="value">
+</list>
+```
+
+-   Key Name: `snip`
+-   Description: Character Category Slot
+-   Key List
+    -   `id`: description
+
 ### Common Underhair
-* Key Name: `sunderhair`
-* Description: Character Category Slot
-* Required Keys
-    * Key Name:
-      Description: 
-      Example:
-      
+
+```xml
+<list type="sunderhair">
+  <item key="value">
+</list>
+```
+
+-   Key Name: `sunderhair`
+-   Description: Character Category Slot
+-   Key List
+    -   `id`: description
+
 ### Outfit Pattern
-* Key Name: `spattern`
-* Description: Character Category Slot
-* Required Keys
-    * Key Name:
-      Description: 
-      Example:
-      
+
+```xml
+<list type="spattern">
+  <item key="value">
+</list>
+```
+
+-   Key Name: `spattern`
+-   Description: Character Category Slot
+-   Key List
+    -   `id`: description
+
 ### Accessroy Slot: None
-* Key Name: `accnone`
-* Description: Character Category Slot
-* Required Keys
-    * Key Name:
-      Description: 
-      Example:
-      
+
+```xml
+<list type="accnone">
+  <item key="value">
+</list>
+```
+
+-   Key Name: `accnone`
+-   Description: Character Category Slot
+-   Key List
+    -   `id`: description
+
 ### Accessory Slot: Head
-* Key Name: `acchead`
-* Description: Character Category Slot
-* Required Keys
-    * Key Name:
-      Description: 
-      Example:
-      
+
+```xml
+<list type="acchead">
+  <item key="value">
+</list>
+```
+
+-   Key Name: `acchead`
+-   Description: Character Category Slot
+-   Key List
+    -   `id`: description
+
 ### Accessory Slot: Ears
-* Key Name: `accear`
-* Description: Character Category Slot
-* Required Keys
-    * Key Name:
-      Description: 
-      Example:
-      
+
+```xml
+<list type="accear">
+  <item key="value">
+</list>
+```
+
+-   Key Name: `accear`
+-   Description: Character Category Slot
+-   Key List
+    -   `id`: description
+
 ### Accessory Slot: Glasses
-* Key Name: `accglasses`
-* Description: Character Category Slot
-* Required Keys
-    * Key Name:
-      Description: 
-      Example:
-      
-### Accessory Slot: Face 
-* Key Name: `accface`
-* Description: Character Category Slot
-* Required Keys
-    * Key Name:
-      Description: 
-      Example:
-      
-### Accessory Slot: Neck 
-* Key Name: `accneck`
-* Description: Character Category Slot
-* Required Keys
-    * Key Name:
-      Description: 
-      Example:
-      
-### Accessory Slot: Shoulder 
-* Key Name: `accshoulder`
-* Description: Character Category Slot
-* Required Keys
-    * Key Name:
-      Description: 
-      Example:
-      
-### Accessory Slot: Chest 
-* Key Name: `accchest`
-* Description: Character Category Slot
-* Required Keys
-    * Key Name:
-      Description: 
-      Example:
-      
-### Accessory Slot: Waist 
-* Key Name: `accwaist`
-* Description: Character Category Slot
-* Required Keys
-    * Key Name:
-      Description: 
-      Example:
-      
-### Accessory Slot: Back 
-* Key Name: `accback`
-* Description: Character Category Slot
-* Required Keys
-    * Key Name:
-      Description: 
-      Example:
-      
-### Accessory Slot: Arm 
-* Key Name: `accarm`
-* Description: Character Category Slot
-* Required Keys
-    * Key Name:
-      Description: 
-      Example:
-      
-### Accessory Slot: Hand 
-* Key Name: `acchand`
-* Description: Character Category Slot
-* Required Keys
-    * Key Name:
-      Description: 
-      Example:
-      
-### Accessory Slot: Leg 
-* Key Name: `accleg`
-* Description: Character Category Slot
-* Required Keys
-    * Key Name:
-      Description: 
-      Example:
-      
-### Accessory Slot: Pubic Area 
-* Key Name: `acckokan`
-* Description: Character Category Slot
-* Required Keys
-    * Key Name:
-      Description: 
-      Example:
-      
+
+```xml
+<list type="accglasses">
+  <item key="value">
+</list>
+```
+
+-   Key Name: `accglasses`
+-   Description: Character Category Slot
+-   Key List
+    -   `id`: description
+
+### Accessory Slot: Face
+
+```xml
+<list type="accface">
+  <item key="value">
+</list>
+```
+
+-   Key Name: `accface`
+-   Description: Character Category Slot
+-   Key List
+    -   `id`: description
+
+### Accessory Slot: Neck
+
+```xml
+<list type="accneck">
+  <item key="value">
+</list>
+```
+
+-   Key Name: `accneck`
+-   Description: Character Category Slot
+-   Key List
+    -   `id`: description
+
+### Accessory Slot: Shoulder
+
+```xml
+<list type="accshoulder">
+  <item key="value">
+</list>
+```
+
+-   Key Name: `accshoulder`
+-   Description: Character Category Slot
+-   Key List
+    -   `id`: description
+
+### Accessory Slot: Chest
+
+```xml
+<list type="accchest">
+  <item key="value">
+</list>
+```
+
+-   Key Name: `accchest`
+-   Description: Character Category Slot
+-   Key List
+    -   `id`: description
+
+### Accessory Slot: Waist
+
+```xml
+<list type="accwaist">
+  <item key="value">
+</list>
+```
+
+-   Key Name: `accwaist`
+-   Description: Character Category Slot
+-   Key List
+    -   `id`: description
+
+### Accessory Slot: Back
+
+```xml
+<list type="accback">
+  <item key="value">
+</list>
+```
+
+-   Key Name: `accback`
+-   Description: Character Category Slot
+-   Key List
+    -   `id`: description
+
+### Accessory Slot: Arm
+
+```xml
+<list type="accarm">
+  <item key="value">
+</list>
+```
+
+-   Key Name: `accarm`
+-   Description: Character Category Slot
+-   Key List
+    -   `id`: description
+
+### Accessory Slot: Hand
+
+```xml
+<list type="acchand">
+  <item key="value">
+</list>
+```
+
+-   Key Name: `acchand`
+-   Description: Character Category Slot
+-   Key List
+    -   `id`: description
+
+### Accessory Slot: Leg
+
+```xml
+<list type="accleg">
+  <item key="value">
+</list>
+```
+
+-   Key Name: `accleg`
+-   Description: Character Category Slot
+-   Key List
+    -   `id`: description
+
+### Accessory Slot: Pubic Area
+
+```xml
+<list type="acckokan">
+  <item key="value">
+</list>
+```
+
+-   Key Name: `acckokan`
+-   Description: Character Category Slot
+-   Key List
+    -   `id`: description
+
 ### Hair Back Slot
-* Key Name: `hairback`
-* Description: Character Category Slot
-* Required Keys
-    * Key Name:
-      Description: 
-      Example:
-      
+
+```xml
+<list type="hairback">
+  <item key="value">
+</list>
+```
+
+-   Key Name: `hairback`
+-   Description: Character Category Slot
+-   Key List
+    -   `id`: description
+
 ### Hair Front Slot
-* Key Name: `hairfront`
-* Description: Character Category Slot
-* Required Keys
-    * Key Name:
-      Description: 
-      Example:
-      
+
+```xml
+<list type="hairfront">
+  <item key="value">
+</list>
+```
+
+-   Key Name: `hairfront`
+-   Description: Character Category Slot
+-   Key List
+    -   `id`: description
+
 ### Hair Side Slot
-* Key Name: `hairside`
-* Description: Character Category Slot
-* Required Keys
-    * Key Name:
-      Description: 
-      Example:
-      
+
+```xml
+<list type="hairside">
+  <item key="value">
+</list>
+```
+
+-   Key Name: `hairside`
+-   Description: Character Category Slot
+-   Key List
+    -   `id`: description
+
 ### Hair Extension Slot
-* Key Name: `hairext`
-* Description: Character Category Slot
-* Required Keys
-    * Key Name:
-      Description: 
-      Example:
-      
+
+```xml
+<list type="hairext">
+  <item key="value">
+</list>
+```
+
+-   Key Name: `hairext`
+-   Description: Character Category Slot
+-   Key List
+    -   `id`: description

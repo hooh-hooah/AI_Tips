@@ -135,3 +135,7 @@ Remember, you need to install Bandizip in C: Drive at this moment to pack zipmod
 
 1. You can't include assetbundle-loaded materials into assetbundle buildlist.
 2. All of preview is temporary to the session. Restarting unity might break the texture.
+
+### Trouble Shooting
+
+if you have any problem then go read [**Trouble Shooting**](tutorials/trouble-shooting.md) document
