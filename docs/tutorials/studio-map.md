@@ -9,29 +9,25 @@ If you need more basic information like setup folders or preparing hair assets, 
 -   [Getting Started with the hooh's Modding Tool](getting_started.md)
 -   [Setting up Folder](tutorials/gearing-up.md)
 
-## Table of Content
-
-1. [Prepare Scene](#Prepare Scene)
-
 ## Steps
 
 ### Prepare Scene
 
 ![image-20200101043939311](images/image-20200101043939311.png)
 
-##### Add Scale to measure the map's size.
+### Add Scale to measure the map's size.
 
 There is `Character Scale Measurement` prefab that helps you to scale your map into AI-shoujo's size. That cylinder is average character size in AI-shoujo.
 
 Most of map will be fine if you scale 9x times larger than original size. but don't forget to scale it properly.
 
-##### (Optional) Place Lights
+### (Optional) Place Lights
 
 Since not most of people are not expert of lights so it's good idea to put some lights and make scene static to make look good for everyone.
 
 You can bake lightmaps and reflection probe, light probes to get extra good quality
 
-##### Make Everything in Layer 11 (Map)
+### Make Everything in Layer 11 (Map)
 
 ![image-20200101044239224](images/image-20200101044239224.png)
 
@@ -44,10 +40,6 @@ Everything should be in Layer 11 to get properly lighted in-game.
 Save scene like this.
 
 ### Make mod.xml
-
-Make your own mod.xml.
-
-here is some example
 
 ```xml
 <packer>
@@ -75,9 +67,15 @@ here is some example
 </packer>
 ```
 
-for detailed information about xml check [**XML File Structure**](technical/xml-file.md) document
+!> The GUID, bundle name, build name should be **unique**, and you can only refer files in Asset Bundles in the Mod XML File.
 
-for detailed information what to put with `<item>` check [**XML List Types**](technical/category-list.md) document
+You can check the comment inside of the XML Code section above to see what to do.
+
+For more detailed information, you can check those documents for reference.
+
+-   [XML File Structure](technical/xml-file.md) for general Mod File Information
+-   [Auto-Path Lists](technical/autopath-list.md) for `<folder auto-path>`
+-   [XML List Types](technical/category-list.md) for `<list type>` and `<item>`
 
 ### Build Mod
 

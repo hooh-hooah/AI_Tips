@@ -12,6 +12,16 @@ If you need more basic information like setup folders or preparing hair assets, 
 
 ## Steps
 
+### Putting Assets
+
+!> `.OBJ` format does not supports FK studio items. Make sure that you're importing `.FBX` format 3D Mesh Files to make FK works on the model.
+
+![](imgs/std_00.png)
+
+Import or make the 3D asset and drag and drop into `assets` folder in your mod folder
+
+It would be best to import all textures, models, and all other required assets to the Unity Editor.
+
 ### Open Workspace
 
 ![image-20200101043341537](images/image-20200101043341537.png)
@@ -75,9 +85,15 @@ here is some example
 </packer>
 ```
 
-for detailed information about xml check [**XML File Structure**](technical/xml-file.md) document
+!> The GUID, bundle name, build name should be **unique**, and you can only refer files in Asset Bundles in the Mod XML File.
 
-for detailed information what to put with `<item>` check [**XML List Types**](technical/category-list.md) document
+You can check the comment inside of the XML Code section above to see what to do.
+
+For more detailed information, you can check those documents for reference.
+
+-   [XML File Structure](technical/xml-file.md) for general Mod File Information
+-   [Auto-Path Lists](technical/autopath-list.md) for `<folder auto-path>`
+-   [XML List Types](technical/category-list.md) for `<list type>` and `<item>`
 
 ### Build Mod
 

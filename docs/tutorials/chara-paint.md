@@ -58,9 +58,15 @@ In the "Import Option" menu, set a few
 </packer>
 ```
 
-Check [**this file**](https://github.com/hooh-hooah/ModdingTool/blob/release/Assets/%40BODY_PARTS/facepaint/mod.xml) or copy and paste it from code section above.
-
 !> The GUID, bundle name, build name should be **unique**, and you can only refer files in Asset Bundles in the Mod XML File.
+
+You can check the comment inside of the XML Code section above to see what to do.
+
+For more detailed information, you can check those documents for reference.
+
+-   [XML File Structure](technical/xml-file.md) for general Mod File Information
+-   [Auto-Path Lists](technical/autopath-list.md) for `<folder auto-path>`
+-   [XML List Types](technical/category-list.md) for `<list type>` and `<item>`
 
 ### Build Mod
 

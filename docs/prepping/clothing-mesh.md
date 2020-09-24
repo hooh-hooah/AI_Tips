@@ -75,7 +75,7 @@ you need to follow some rules
 -   Check if the armature's position, scale, angle hasn't changed.
 -   You need to make your meshes name complies mesh naming convention
 
--   if you're making one of `Top`, `Bottom`, `Inner Top`,`Inner Bottom`, `Set`, `Inner Set` mod
+    -   if you're making one of `Top`, `Bottom`, `Inner Top`,`Inner Bottom`, `Set`, `Inner Set` mod
 
         ```
         cf_J_Root (Armature)
