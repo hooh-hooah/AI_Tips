@@ -1,4 +1,4 @@
-# How to make custom skins
+# Creating Custom Skin
 
 ## Related Document
 

@@ -1,4 +1,4 @@
-# How to make Skirt Clothing
+# Creating Custom Skirts
 
 ## Related Document
 
@@ -11,6 +11,12 @@ If you need more basic information like setup folders or preparing hair assets, 
 
 ## Steps
 
+### Open Workspace
+
+![image-20200101043341537](images/image-20200101043341537.png)
+
+Open `character_scene.unity` in Modding Tool (it's opened by default.)
+
 ### Putting Assets
 
 !> `.OBJ` format does not supports FK studio items. Make sure that you're importing `.FBX` format 3D Mesh Files to make FK works on the model.
@@ -21,15 +27,15 @@ Import or make the 3D asset and drag and drop into `assets` folder in your mod f
 
 It would be best to import all textures, models, and all other required assets to the Unity Editor.
 
-### Open Workspace
+Once you put all assets to the folder, create related materials for the model.
 
-![image-20200101043341537](images/image-20200101043341537.png)
+![](imgs/std_01.png)
 
-Open `character_scene.unity` in Modding Tool (it's opened by default.)
+After setting up all materials, Put the model on the scene, and rig up the material.
 
-### Setup GameObject
+![](imgs/std_06.png)
 
-Drag your clothemesh.fbx to body_example and see if the mesh fits.
+You can also assign materials in the model import menu that you can see when you click the model.
 
 ### Initialize Component
 
@@ -37,21 +43,49 @@ Drag your clothemesh.fbx to body_example and see if the mesh fits.
 
 Once you put your mod on character then go to transform and press `Initialize Modding Components > Common > Clothing`
 
-### Making your clothing colorable
+### Setting Colormask
 
-If you need to want to make color working
+AI/HS2 utilizes custom colormask texture to color the clothing's texture with various colors.
 
-for detailed info refer [**ILLUSION Shader**](technical/illusion-shader.md) for detailed information
+If you don't want to struggle with setting up colormask, you can draw a black dot and save it as png and call it colormask.
+
+You can check [**ILLUSION Shader**](technical/illusion-shader.md?id=texturepattern-rendering-clothing) document for more detailed information about colormask
 
 ### Setting Up Dynamic Bones
 
+!> Dynamic Bone is a paid asset. The only reason it's in the modding tool is to make users create dynamic clothing for the game. Do not use this asset to other projects.
+
 #### Manual
+
+![](imgs/bone_00.png)
 
 #### Automatic Preset
 
+![](imgs/pset_00.png)
+
+### Check Dynamic Bones
+
+go to play mode and check dynamic bones are working
+
+if components are working well, go to next step
+
 ### Register Prefab
 
-Drag your gameobject to Project folder.
+![](imgs/std_03.png)
+
+After marking all of the items as `Studio Item`, it's time to register them as `prefab`.
+
+Drag and drop to the project folder. Make sure that you're in the `prefabs` folder in your mod folder directory.
+
+Unfortunately, you can't register multiple items as prefabs by drag and drop to the project folder.
+
+But, there is a solution. Go to hooh's modding tool window and find `Create Prefab from Selected Objects`.
+
+![](imgs/std_07.png)
+
+The button is in the `Quick Unity Macros` fold groups in the window. You can easily find the button once you open the foldout menu.
+
+This button will register multiple selected items as `prefab` to the current folder.
 
 ### Make mod.xml
 
@@ -67,21 +101,28 @@ Drag your gameobject to Project folder.
         <folder auto-path="thumbs" from="thumbs" filter=".*?\.(psd|png|tif)"/>
     </bundles>
     <build>
-        <list type="ftop">
+        <!-- If you put your clothing inside of regular bottom category, use example below-->
+        <list type="fbottom">
             <item
-                    kind="0" possess="1" name="My First Outfit" state="0"
-                    coordinate="1" mesh-a="mesh" en-us="0"
-                    no-bra="0" bodymask-bundle="0" bodymask-tex="0"
-                     bramask-bundle="0" bramask-tex="0" breakmask-tex="0"
-                    innermask-tb-bundle="0" innermask-tb-tex="0"
-                    innermask-b-bundle="0" innermask-b-tex="0"
-                    panstmask-bundle="0" panstmask-tex="0"
-                     bodymask-b-bundle="0" bodymask-b-tex="0"
-                    tex-main="lopo_cf_m_top_onepiece1_AlbedoTransparency"
-                     tex-mask="colormask" tex-main2="0" tex-mask2="0"
-                    tex-main3="0" tex-mask3="0" hide-bottom="0" thumb="thumb_mesh"
+				kind="0" possess="1" name="[hooh] Cardigan" en_us="0" state="0" coordinate="0" mesh-a="cardigan" no-bra="0"
+				bodymask-bundle="chara/00/ft_bodymask_00.unity3d" bodymask-tex="cf_bodymask_cutej"
+				bramask-bundle="chara/00/ft_bramask_00.unity3d" bramask-tex="cf_bramask_01"
+				breakmask-tex="0" innermask-tb-bundle="0" innermask-tb-tex="0" innermask-b-bundle="0" innermask-b-tex="0"
+				panstmask-bundle="0" panstmask-tex="0" bodymask-b-bundle="0" bodymask-b-tex="0"
+				tex-main="diffuse" tex-mask="colormask" tex-main2="0" tex-mask2="0" tex-main3="0" tex-mask3="0" hide-bottom="0"
+				thumb="thumb_image2"
             />
         </list>
+        <!-- If you put your clothing inside of inner bottom category, use example below-->
+		<list type="finbottom">
+            <!-- if you set coordinate to "1", it becomes top/bottom set. -->
+			<item
+    			kind="0" possess="1" name="@@EXAMPLE PANTYSTOCKING" en_us="0"
+				mesh-manifest="abdata" mesh-bundle="example/pantystocking.unity3d" mesh-a="clothmesh" state="1"
+            	tex-main="diffuse" tex-mask="colormask" tex-main2="0" tex-mask2="0" hide-bottom="0"
+				thumb-bundle="example/pantystocking_thumb.unity3d" thumb="thumb_image"
+			/>
+		</list>
     </build>
 </packer>
 ```

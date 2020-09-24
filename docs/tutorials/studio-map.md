@@ -1,4 +1,4 @@
-# Making Studio Map Tutorial
+# Creating Custom Studio Map
 
 ## Related Document
 
@@ -103,7 +103,7 @@ Test your clothes working in-game.
 
 #### My map is kinda weirdly placed.
 
-Place Root Object of Map Position 0,0,0 and Angle 0,0,0 and Scale 1,1,1.
+Place Root Object of Map `Position 0,0,0`, `Angle 0,0,0`, and `Scale 1,1,1` in `Trnasform` Component Inspector.
 
 #### Map does not takes any lightings
 

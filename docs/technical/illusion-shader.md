@@ -24,11 +24,9 @@
 
 #### ColorMask
 
-![image-20200104175506932](images/image-20200104175506932.png)
+![image-20200104175506932](imgs/image-20200104175506932.png)
 
-![image-20200104175801808](images/image-20200104175801808.png)
-
-Colormask currently works like this:
+![image-20200104175801808](imgs/image-20200104175801808.png)
 
 |       | Color         | Name         | Description                              |
 | ----- | ------------- | ------------ | ---------------------------------------- |

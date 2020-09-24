@@ -1,4 +1,4 @@
-# How to make HS2 In-Game Map
+# Creating Custom HS2 In-Game Map
 
 !> Honey Select 2 Main-Game Map Integration is still in development. There might be unexpected critical failures that I missed to fix. Reporting bug is one of way to contribute to development and save everyone's time.
 
