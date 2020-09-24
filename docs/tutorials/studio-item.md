@@ -11,18 +11,111 @@ If you need more basic information like setup folders or preparing hair assets, 
 
 ## Steps
 
-Follow this if you're diagnosed to live for 60 seconds.
+### Putting Assets
 
--   Put your 3d models and textures inside of assets
--   Drag the model and adjust the materials and stuff
--   Combine the things you want to import into the game in one GameObject
--   Click "Common > Studio" Item after clicking the combined object
--   Drag the prefab to "prefabs" folder
--   Open mod.xml
--   Add like this
--   Drag mod.xml to the mod builder
--   Press Build Mod
--   Good, you're done
+!> `.OBJ` format does not supports FK studio items. Make sure that you're importing `.FBX` format 3D Mesh Files to make FK works on the model.
+
+![](imgs/std_00.png)
+
+Import or make the 3D asset and drag and drop into `assets` folder in your mod folder
+
+It would be best to import all textures, models, and all other required assets to the Unity Editor.
+
+Once you put all assets to the folder, create related materials for the model.
+
+![](imgs/std_01.png)
+
+After setting up all materials, Put the model on the scene, and rig up the material.
+
+![](imgs/std_06.png)
+
+You can also assign materials in the model import menu that you can see when you click the model.
+
+### Setting up assets
+
+![](imgs/std_02.png)
+
+When you've done making model work in the Unity Editor, you need to mark your model with the component to make your model work in the game.
+
+This step was pretty painful back in the day, and thankfully it's properly automated with the power of hooh's Modding tool.
+
+Go to the `Transform` section. It's mostly placed on the right top of the screen.
+
+You can see the "Initialize Modding Components" button with a brighter background.
+
+Click `Common > Studio Item` then you're mostly done with setting up the model.
+
+You can apply multiple objects at once when you selected many items in the scene.
+
+![](imgs/std_03.png)
+
+After marking all of the items as `Studio Item`, it's time to register them as `prefab`.
+
+Drag and drop to the project folder. Make sure that you're in the `prefabs` folder in your mod folder directory.
+
+Unfortunately, you can't register multiple items as prefabs by drag and drop to the project folder.
+
+But, there is a solution. Go to hooh's modding tool window and find `Create Prefab from Selected Objects`.
+
+![](imgs/std_07.png)
+
+The button is in the `Quick Unity Macros` fold groups in the window. You can easily find the button once you open the foldout menu.
+
+This button will register multiple selected items as `prefab` to the current folder.
+
+### Registering Item
+
+![](imgs/std_04.png)
+
+When you've registered all items as prefabs in the `prefabs` folder, you need to let the game know that it can reference those models.
+
+You can reference those prefabs in the Mod XML files.
+As the previous [Setting up Folder](tutorials/gearing-up.md) document said, you can make Mod XML files with templates.
+
+You can easily start out making new Mod XML files by right-clicking in the folder and find `Mod XML Template > Studio Maps and Items`
+
+#### Manually Modifing XML File
+
+```xml
+<packer>
+    <guid>ex.mollit.nulla</guid>
+    <name>Template Mod</name>
+    <version>0.0.1</version>
+    <author>Anonymous</author>
+    <description>Template Studio Maps and Item Mod - Made with hooh's Modding Tool</description>
+    <bundles>
+        <folder auto-path="prefabs" from="prefabs" filter=".*?\.prefab" />
+        <move auto-path="studiothumb" from="thumbs" filter=".*?\.png" />
+    </bundles>
+    <build>
+        <list type="bigcategory">
+            <!-- this id should be unique -->
+            <item id="2020" name="Example Big Category" />
+        </list>
+        <list type="midcategory">
+            <item big-category="2020" id="1" name="Example Mid Category" />
+        </list>
+        <list type="studioitem">
+            <!-- add items in here. -->
+            <!-- object is the prefab name. -->
+            <!-- name is the name that you want to disply in the game -->
+            <item object="example_item" name="Example Item" mid-category="1" big-category="2020" />
+        </list>
+    </build>
+</packer>
+```
+
+You can check the comment inside of the XML Code section above to see what to do.
+
+For more detailed information, you can check those documents for reference.
+
+-   [XML File Structure](technical/xml-file.md)
+-   [Auto-Path Lists](technical/autopath-list.md)
+-   [XML List Types](technical/category-list.md)
+
+#### Using "Mod Scaffolding"
+
+![](imgs/std_05.png)
 
 ### Build Mod
 
@@ -52,12 +145,34 @@ _Difficulty: Lazy_
 
 -   Separate texture sets with several subfolders
 -   include `<use-dependency>` option mod.xml here is the example.
+
+    ```xml
+    <author>hooh</author>
+    ...
+    <options>
+        <use-dependency />
+    </options>
+    <bundles>
+        <folder auto-path="prefabs-split" from="prefabs" filter=".*\.prefab" grouped="true" />
+        <move auto-path="studiothumb" from="thumbs" filter="*\.png" />
+        <folder auto-path="maps" from="map00" filter=".*\.unity" target="map00" />
+    ...
+    ```
+
+    For more detailed information, you can check those documents for reference.
+
+    -   [XML File Structure](technical/xml-file.md)
+    -   [Auto-Path Lists](technical/autopath-list.md)
+    -   [XML List Types](technical/category-list.md)
+
 -   Now Mod Packer will pack textures in separate bundles and each prefab bundles will reference that texture.
 -   Keep in mind that once you enabled this option your mod is now dependent to "Dependency Loader Plugin"
 
 #### When you want to check if mod.xml is valid without building the mod
 
 _Difficulty: Sloth_
+
+![](imgs/dryrun.png)
 
 -   Press the "Dry Run" Button inside of the Mod Builder Menu.
 -   If everything is good, it will not display any message but a nice blip sound.
@@ -74,7 +189,7 @@ _Difficulty: Low_
 
 -   Make sure that those images that you've made are **"Read/Write Enabled"** or unity will refuse to utilize your foreground/background texture.
 
-    ![1600689442803](C:\Users\carla\AppData\Roaming\Typora\typora-user-images\1600689442803.png)
+    ![1600689442803](images\1600689442803.png)
 
 -   Make sure your studio items are registered inside of mod.xml (Studio Thumbnail Generator will only generate registered items inside of mod.xml)
 
@@ -86,26 +201,22 @@ _Difficulty: Low_
 
 ### When you have to generate dozens of studio items into mod.xml
 
-_Difficulty: Confusing sometimes_
+_Difficulty: You're reading it again_
 
 -   Go to the "hooh's Modding Tool" window and navigate to the "Mod Scaffolding".
 
-    ![1600689487533](C:\Users\carla\AppData\Roaming\Typora\typora-user-images\1600689487533.png)
+    ![1600689487533](images\1600689487533.png)
 
 -   Go to the prefab folder where prefabs are stored.
 
 -   Drag and drop prefabs to the "Prefabs to put in XML file". You can drag multiple objects by dragging objects right above the text.
 
-    ![1600689509177](C:\Users\carla\AppData\Roaming\Typora\typora-user-images\1600689509177.png)
+    ![1600689509177](images\1600689509177.png)
 
 -   As the title suggests, it will automatically register the prefabs you've dragged into the XML file.
 -   Adjust the big category and mid category number to what you want to use. be sure that those ids are not in use or you're going to have some bad time solving the conflict in the game.
 
-### When you have to make things colorable
-
-_Difficulty: Easy_
-
--   Once you initialized the studio component with the "Initialize Mod Components" in the transform window, basically it's colorable.
+### When you have to make things multi colorable
 
 _Difficulty: Nut_
 
@@ -131,3 +242,5 @@ _Difficulty: Chad_
 _Difficulty: Nasty_
 
 -   You need basic animation for your model. Animate with 3D software like blender or animate with unity.
+
+-   I'll update this section later when i have nice template model to showcase how to add custom animated model.
