@@ -12,9 +12,15 @@
     -   skybox export as zipmod or something i guess
 
 -   add head mod support
+-   add head mod preview and validation
 -   add ai furniture import
 -   add ai map import
--   preview the map
--   preview the chracter
+-   add support for new character scenario
+-   add support for new personaility
+-   add support for new ai scenario
+-   add support for new hs2 scenario
+-   add support for hs2 daily event
+-   preview the map without launching the game
+-   preview the chracter without launching the game
 -   character loader
 -   support koikatsu
