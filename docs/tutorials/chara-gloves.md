@@ -115,4 +115,4 @@ I recommend 2155x's makersearch to save your time
 
 ### Trouble Shooting
 
-!> If you can't find the issue in here then check [**Trouble Shooting**](tutorials/trouble-shooting.md) page.
+!> If you can't find the issue here, then check [**Trouble Shooting**](tutorials/trouble-shooting.md) page.

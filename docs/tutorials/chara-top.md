@@ -10,7 +10,11 @@ If you need more basic information like setup folders or preparing hair assets, 
 
 -   [Setting up Folder](tutorials/gearing-up.md)
 
+-   [Creating Clothing Mesh](prepping/clothing-mesh.md)
+
 ## Steps
+
+?> This tutorial only provides information about putting existing mesh to the main game. Please check [Creating Clothing Mesh](prepping/clothing-mesh.md) Document if you want to know how to make a clothing model.
 
 ### Putting Assets
 
@@ -50,7 +54,7 @@ You can check [**ILLUSION Shader**](technical/illusion-shader.md?id=texturepatte
 
 Drag your gameobject to Project folder.
 
-### Make mod.xml
+### Creating Mod XML
 
 ```xml
 <packer>
@@ -128,4 +132,4 @@ I recommend 2155x's makersearch to save your time
 
 ### Trouble Shooting
 
-!> If you can't find the issue in here then check [**Trouble Shooting**](tutorials/trouble-shooting.md) page.
+!> If you can't find the issue here, then check [**Trouble Shooting**](tutorials/trouble-shooting.md) page.

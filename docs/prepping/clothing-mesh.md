@@ -1,5 +1,7 @@
 # Preparing Clothing Mesh
 
+?> This tutorial only provides information about creating a mesh for the main game. Please check "Modding Tutorials" at the sidebar.
+
 ## Intro
 
 This tutorial is for 3D Modeling Software called Blender. It is free, Open Source, and easy to learn (maybe).
@@ -170,30 +172,48 @@ op.axis_up = 'Y'
 
 ![](images/ig_00.png)
 
-load your model
+Once you've made the model and imported it, you can test if your model works in the unity editor before putting the model in the main game.
 
-open test scene
+If the model is not working in the Unity Editor, it will not work in the main game either. So, checking the model is working in the engine is an important task you should not miss.
 
-rig your model and shit
+Remember that you're only testing if the mesh works correctly with the game's base body mesh.
 
-press play button
+![](images/test_00.png)
 
-you're good to go.
+Locate `Clothing Tester` inside the `Base Files` folder and drag it to the scene to test your mesh.
 
-if not, adjust your mesh and export.
+After putting the prefab to the scene, click the `Clothing Tester` and find `Clothing Bind Helper` in the inspector and drag your clothing model to `Meshes To Test`.
 
-once you attached the mesh to the character you don't have to attach it again unless you changed the name of the mesh or added new mesh in separate object.
+![](images/test_01.png)
+
+If you can see your model inside of the `Meshes To Test` list, then you're good to go. Remember that you can put more than one model to test multiple combinations of models at once to see how they will work in the game.
+
+![](images/test_02.png)
+
+When you go Play Mode and press "Test Clothing Mesh in Play Mode", you can see the meshes following the character with the animation.
+
+If the model is not following the bones, then you can check the Trouble Shooting section below.
 
 ## Trouble Shooting
 
-!> If you can't find the issue in here then check [**Trouble Shooting**](tutorials/trouble-shooting.md) page.
+!> If you can't find the issue here, then check [**Trouble Shooting**](tutorials/trouble-shooting.md) page.
 
 ### Mesh is not following the character
 
-check if renderer is skinned mesh renderer if not youre boned
+Check if you've correctly exported the model from the 3D Modeling Software.
 
-### It works good in blender but not in editor
+Especially for blender users, include the armature, mesh, and armature modifier to an exported FBX file, or it likely won't work.
 
-as i stated at the top of document, only 4 weights per verticies is allowed by unity default. there is no way to lift this limitation, sorry.
+If you failed to export the model once, the unity engine would think that your model is not the model with the bones.
 
-you can protest to illusion hq and demand version upgrade
+![](images/imp_00.png)
+
+In that case, you need to change the rig of the model to "Animation Type: Generic" to get your mesh working again.
+
+### I can't see my Mesh / Mesh gets too big when I test it
+
+Check if the model's scale is `1,1,1`. Otherwise, the mode will re-scaled to the base model's scale.
+
+### It works well in the Blender but not in the Unity Editor.
+
+As i stated at the top of the document, only four weights per vertices are allowed by unity default. There is no way to lift this limitation, sorry.

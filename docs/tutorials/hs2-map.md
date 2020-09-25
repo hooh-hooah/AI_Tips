@@ -79,4 +79,4 @@ It depends on your mod size, but it will play a nice sound to notify the packing
 
 ### Trouble Shooting
 
-!> If you can't find the issue in here then check [**Trouble Shooting**](tutorials/trouble-shooting.md) page.
+!> If you can't find the issue here, then check [**Trouble Shooting**](tutorials/trouble-shooting.md) page.
