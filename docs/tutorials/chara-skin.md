@@ -60,7 +60,7 @@ you can find detailed information in here
 <packer>
 	...
     <bundles>
-    	<!-- referencing "tattoo" folder. path is relative to the folder  where mod.xml is present -->
+    	<!-- referencing "tattoo" folder. path is relative to the folder where mod.xml is present -->
         <folder from="tattoo" auto-path="textures" filter=".+\.(png|tga|tif|psd)"/>
 	</bundles>
 	<build name="example_bodypaint">

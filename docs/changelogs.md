@@ -4,25 +4,23 @@
 
 ### 2020-09-27
 
--   removed 7z.exe dependency → changed to sharpziplib
--   made document
--   added studio thumbnail generator
--   added studio thumbnail compression
--   complete rework of mod packer
-    -   improved asset validation
-    -   improved automation
-    -   easy to use
-    -   easy to implement with other code
-    -   added material editor support / automation
-    -   added dependency loader automation
-    -   added heelz support / automation
--   complete rework of xml helper
--   renamed xml helper to mod scaffolding
--   now modpacker zips with stored mod to improve loading performance
--   optimized modding tool performance
-    -   reduced draw calls of inspector
-    -   changed all button events to delegate to prevent gui call fuckups
--   Added Temporary resource loader
+-   Changed archive method: Removed `7z` dependency → changed to `SharpZipLib`.
+-   New modding tool document is now available in http://hooh-hooah.github.io/
+-   Added Studio Item Thumbnail Generator
+-   Added and Integrated Image Compression Library with Item Thumbnail Generator
+-   Reworked and Improved Mod Packer.
+    -   All Mod Packing/Validation has moved to the `SideloaderMod` class.
+    -   Legacy Mod XML is compatible. But it is recommended to do little work to legacy mods.
+    -   Improved Mod XML and Asset Validation. Now it can detect resolved AssetBundles when you make new Mod Packer Class
+    -   Improved Automation and Quality of Life Changes.
+    -   Added Material Editor Support and Automation
+    -   Added Dependency Loader Automation
+-   XML Helper has moved to the part of `SideloaderMod` class
+-   Changed mod packer's archive option to `Stored`. The Loading Performance has been greatly improved compared to the last method.
+-   Optimized the Modding Tool's GUI Performance.
+    -   Now, AI/HS2 Inspectors Repaint when the content has changed.
+    -   Changed all button events to delegate to prevent GUI Stack Failure
+-   Added various ILLUSION shader preview
 
 ## 0.4.2
 

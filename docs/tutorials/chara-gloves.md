@@ -48,7 +48,7 @@ for detailed info refer [**ILLUSION Shader**](technical/illusion-shader.md) for 
 
 Drag your gameobject to Project folder.
 
-### Make mod.xml
+### Creating Mod XML
 
 ```xml
 <packer>

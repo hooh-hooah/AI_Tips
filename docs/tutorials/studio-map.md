@@ -39,7 +39,7 @@ Everything should be in Layer 11 to get properly lighted in-game.
 
 Save scene like this.
 
-### Make mod.xml
+### Creating Mod XML
 
 ```xml
 <packer>
