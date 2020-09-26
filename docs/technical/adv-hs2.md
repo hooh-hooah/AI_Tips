@@ -18,13 +18,20 @@
         packData.EventCGName = BaseMap.ConvertMapNameEnglish(game.mapNo) + "_Event" + instance.advDelivery.adv_category.ToString("00");
         ```
 
--   `EventCGName`
+-   `EventCGBundle`
 
     -   Location: `ADVMainScene.cs:75-82`
     -   Assign Code:
 
         ```csharp
+
+        List<string> list = GlobalMethod.GetAssetBundleNameListFromPath("adv/eventcg/")
+            .Select(x => x).OrderByDescending(x => x).ToList();
+
+        //...
+
         packData.EventCGBundle = string.Empty;
+
         foreach (string text in list)
         {
           if (AssetBundleCheck.GetAllAssetName(text, false, null, false).Contains(packData.EventCGName))
