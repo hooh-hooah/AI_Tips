@@ -22,11 +22,17 @@ Yes. You can do anything you want.
 
 ## About Workshop
 
+### Where do you use donated money?
+
+I spend most of the donated funds for a monthly subscription of tools or services, PBR Resources, and 3D models for new content.
+
+Sometimes I had to see paid tutorials/courses to learn to do something. I'm trying my best to make the penny count.
+
 ### Do you make mods frequently?
 
 Yes. I'm aiming to release a new mod every week. Sometimes some technical issues delay the schedule, but mostly it's on the weekly release schedule.
 
-### How long is Early Access?
+### How long in Early Access?
 
 Early Access will last four weeks to 8 weeks. It depends on how the content is original.
 The 'original' in this sentence means how many hand-made assets in the mod.
@@ -36,6 +42,10 @@ The 'original' in this sentence means how many hand-made assets in the mod.
 [Workshop Discord](https://discord.gg/vQkzH73)
 
 ## About me
+
+### What is your timezone?
+
+Japan Standard Time (GMT+09).
 
 ### Do you take commissions?
 
@@ -49,4 +59,4 @@ I usually present in [ILLUSION Discord](https://discord.gg/illusionsoft).
 
 You can ping me from there or join [Workshop Discord](https://discord.gg/vQkzH73) to contact me.
 
-If you need more serious contact, please send an e-mail to `hooh-hooah@protonmail.com`
+If you need more serious contact, please send an e-mail to `hooh-hooah@protonmail.com`.
