@@ -1,5 +1,7 @@
 # How to make hairs
 
+!> **The New Modding Tool’s Hair Support is postponed to September 30 due to SB3Utility Version Update and stabilizing.** You won’t be able to mod new hair until the update. Sorry for the inconvenience.
+
 ## Related Documents
 
 This page only contains how to put hair models into the game with adjustable attributes.
