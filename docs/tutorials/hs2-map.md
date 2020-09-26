@@ -169,6 +169,7 @@ The modding tool will generate the event scene info. So, don't worry.
           <use-dependency />
     </options>
     <bundles>
+        <folder auto-path="thumbs" from="map_thumbs" filter=".*\.png"/>
         <folder auto-path="maps" from="map00" filter=".*\.unity" target="map00"/>
         <folder auto-path="mapdata" from="map00" filter=".*\.asset" target="map00" />
     </bundles>

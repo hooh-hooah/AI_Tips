@@ -25,8 +25,10 @@
     -   [Studio Items](tutorials/studio-item.md)
     -   [Studio Maps](tutorials/studio-map.md)
     -   [HS2 Main Game Map](tutorials/hs2-map.md)
-    -   ~~AI Main Game Map~~ (WIP)
-    -   ~~Custom Plugin~~ (WIP)
+    -   ~~Custom Scenario~~ (WIP, Q4)
+    -   ~~AI Furniture~~ (WIP, Q4)
+    -   ~~AI Main Game Map~~ (WIP, Q4)
+    -   ~~Custom Plugin~~ (WIP, Q4)
 -   **Technical Details**
     -   [Shader Informations](technical/shaders.md)
     -   [Main-Game Plugin Dependency](technical/plugins.md)
