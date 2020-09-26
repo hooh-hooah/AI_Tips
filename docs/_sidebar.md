@@ -34,6 +34,8 @@
     -   [Auto-Path Lists](technical/autopath-list.md)
     -   [XML List Types](technical/category-list.md)
     -   [ILLUSION Standard](technical/illusion-system.md)
+        -   [Honey Select 2 ADV](technical/adv-hs2.md)
+        -   [AI-Shoujyo ADV](technical/adv-ai.md)
     -   [ILLUSION Shader](technical/illusion-shader.md)
     -   [Optimization](technical/optimization.md)
 -   **Community**
