@@ -14,84 +14,66 @@ Also, If you're using different 3D Modeling Software like Autodesk Maya or 3dsMa
 
 ![](images/tut_01.png)
 
-First of all, you need to find the basic rig of the model in order to make any clothing/outfit.
+First of all, you need to find the model's basic rig to make any clothing/outfit.
 
-Locate `base_female_clothing.blend` file and open it up with blender.
+Locate the `base_female_clothing.blend` file and open it up with Blender.
 
-it already has most of the setup so it's good to start something from this
+The blender file already has most of the things you need to create the mesh for the character, so you don't have to look for other things.
 
 ### Make/Import Mesh
 
 ![](images/tut_02.png)
 
-Once you opened the mesh file, import your mesh and create the mesh with the base female mesh.
+Once you opened the mesh file, import your mesh, or create the mesh with the base female mesh.
 
 ### Rig the mesh
 
 ![](images/tut_03.png)
 
-after setting up your mesh around the base body, you need to rig your model.
+After setting up your mesh around the base body, you need to rig your model.
 
-you can hand paint the rig by the hand but it's good to make computer to the job first.
+You can hand paint the rig by the hand, but it's good to make a computer to the job first.
 
-add `Data Transfer` modifier
+Add the `Data Transfer` modifier to the cloth mesh and set to target to `base body mesh` and check `vertex data` to project weight paints from the base body.
 
-set to `base body mesh` and check `vertex data`
-
-click `generate data layer`
-
-and apply the modifier. blender 2.8x has apply button on the menu. 2.9x has small "V" mark has apply button
+Click the `Generate Data Layer` to generate the vertex weights list and apply the modifier. Blender 2.8x has the Apply Button on the menu, but in Blender 2.9x, it's moved to inside of the "v" button.
 
 ![](images/tut_04.png)
 
-after applying the modifier, check if it's moving as intended.
+After applying the modifier to the mesh, Select the bones and move the bones in `Pose Mode` and move around limbs to check if vertex weight has transferred correctly.
 
-do not trust data transfer. it's not perfect at all.
+But, Do not trust data transfer entirely. Surely it does most of its job, but it's not perfect at all.
 
 ![](images/rig_00.png)
 
-as you can see breast area are messed up, in that case you need to fix it by yourself.
+As you can see, the breast area has bad vertex weights. In that case, you need to fix it by yourself.
 
-you have few option to fix
+You can choose one of the options to fix this bad vertex weights:
 
-1. paint nad blur manually
+1. paint and blur manually
    ![](images/rig_01.png)
    very painful but accurate
-   but if you just blur the edge with blur brush, it's less painful
+   but if you blur the edge with blur brush, it's less painful
 2. blur all
    ![](images/rig_02.png)
-   risky, not work mostly but sometime it works and saves you tons of hours
+   risky, not work mostly, but sometimes it works and saves you tons of hours
 
-!> Unity Engine 2018.2.21f, 2018.4.11f only supports 4 weights per vertex. You need to use `Weights > Limit Total` and limit vertex weight count to 4 to prevent data loss
+!> Unity Engine 2018.2.21f, 2018.4.11f only supports four weights per vertex. You need to use `Weights > Limit Total` and limit vertex weight counts to 4 to prevent data loss.
 
 ### Organize Mesh
 
 ![](images/str_00.png)
 
-Once you're done making your mesh, you need to organize your mesh to make it work in the game and the modding tool automatically assingn the mesh and save you some time
+Once you've done making your mesh, you need to organize your mesh to make it work in the game, and the modding tool automatically assigns the mesh and save you some time.
 
-you need to follow some rules
+You must comply these rules to use your clothing mesh in the game.
 
--   Check you're exporting only one armature
--   Check if the armature name isr `cf_J_Root`
--   Check if the armature's position, scale, angle hasn't changed.
--   You need to make your meshes name complies mesh naming convention
+-   Check you're exporting only one Armature.
+-   Check if the armature name is `cf_J_Root`.
+-   Check if the Armature's position, scale, the angle hasn't changed.
+-   You need to make your meshes name complies the mesh naming convention.
 
-    -   if you're making one of `Top`, `Bottom`, `Inner Top`,`Inner Bottom`, `Set`, `Inner Set` mod
-
-        ```
-        cf_J_Root (Armature)
-            ↳ n_bot_a (Required for bottom clothing)
-                ↳ ... (optional, toggleable additional mesh for bottom clothing)
-            ↳ n_bot_b (optional, mesh for half-off state for bottom clothing.)
-                ↳ ... (optional, toggleable additional mesh for half-off bottom clothing)
-            ↳ n_top_a (Required for top clothing)
-                ↳ ... (optional, toggleable additional mesh for top clothing)
-            ↳ n_top_b (optional, mesh for half-off state of top clothing.)
-                ↳ ... (optional, toggleable additional mesh for half-off top clothing)
-        ```
-
-    -   if you're making anything else
+    -   If you're making one of `Top`, `Bottom`, `Inner Top`, `Pantyhose`, `Inner Bottom`, `Set`, `Inner Set` clothing use this structure.
 
         ```
         cf_J_Root (Armature)
@@ -105,17 +87,25 @@ you need to follow some rules
                 ↳ ... (optional, toggleable additional mesh for half-off top clothing)
         ```
 
--   check all of mesh under `cf_J_Root` Armature has `Armature Modifier`
+    -   If you're making anything else then rule is less stricter than above:
+
+        ```
+        cf_J_Root (Armature)
+            ↳ * (Any mesh name is allowed.)
+                ↳ ... (optional, toggleable additional mesh for bottom clothing)
+        ```
+
+-   Ensure the meshes under `cf_J_Root` Armature has `Armature Modifier`.
 
 ### Export Mesh
 
 ![](images/export_00.png)
 
-When you're finished with adjusting your mesh, you need to export your mesh to unity editor to use the mesh in the game.
+When you've done adjusting your mesh, you need to export your mesh to the unity editor to use the mesh in the game.
 
-Since illusion does not like default unity export, you need to do few setup before exporting your model to the editor.
+Since ILLUSION does not like default unity export, you need to do a few setups before exporting your model to the editor.
 
-enable those options
+Use these export options to use your model in the Unity Engine.
 
 -   **Bake Anim** → OFF
 -   **Export Types** → {Empty, Armature, Mesh, Other}
@@ -126,8 +116,7 @@ enable those options
 -   **Apply Unit** → ON
 -   **Apply Transform** → ON
 -   **Bake Animation** → OFF
-
-if you know how to import / make your own export preset, just copy and paste this option.
+-   If you know how to import/make your export preset in the Blender, then copy and paste this option.
 
 ```python
 import bpy
@@ -172,9 +161,11 @@ op.axis_up = 'Y'
 
 ![](images/ig_00.png)
 
-Once you've made the model and imported it, you can test if your model works in the unity editor before putting the model in the main game.
+Once you've made the model and imported it, you can test if your model works in the unity editor before putting it in the main game.
 
 If the model is not working in the Unity Editor, it will not work in the main game either. So, checking the model is working in the engine is an important task you should not miss.
+
+Remember that you're only testing if the mesh works correctly with the game's base body mesh.
 
 Remember that you're only testing if the mesh works correctly with the game's base body mesh.
 
@@ -190,7 +181,7 @@ If you can see your model inside of the `Meshes To Test` list, then you're good 
 
 ![](images/test_02.png)
 
-When you go Play Mode and press "Test Clothing Mesh in Play Mode", you can see the meshes following the character with the animation.
+When you go Play Mode and press "Test Clothing Mesh in Play Mode", you can see the meshes following the animation's character.
 
 If the model is not following the bones, then you can check the Trouble Shooting section below.
 
@@ -202,7 +193,7 @@ If the model is not following the bones, then you can check the Trouble Shooting
 
 Check if you've correctly exported the model from the 3D Modeling Software.
 
-Especially for blender users, include the armature, mesh, and armature modifier to an exported FBX file, or it likely won't work.
+Especially for blender users, include the Armature, mesh, and armature modifier to an exported FBX file, or it likely won't work.
 
 If you failed to export the model once, the unity engine would think that your model is not the model with the bones.
 
@@ -212,8 +203,8 @@ In that case, you need to change the rig of the model to "Animation Type: Generi
 
 ### I can't see my Mesh / Mesh gets too big when I test it
 
-Check if the model's scale is `1,1,1`. Otherwise, the mode will re-scaled to the base model's scale.
+Check if the model's scale is `1,1,1`. Otherwise, the Mode will re-scaled to the base model's scale.
 
 ### It works well in the Blender but not in the Unity Editor.
 
-As i stated at the top of the document, only four weights per vertices are allowed by unity default. There is no way to lift this limitation, sorry.
+As I stated at the top of the document, only four weights per vertices are allowed by unity default. There is no way to lift this limitation, sorry.

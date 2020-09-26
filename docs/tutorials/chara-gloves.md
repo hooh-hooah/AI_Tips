@@ -1,6 +1,6 @@
 # How to make Top Clothes
 
-## Related Document
+## Related Documents
 
 This page only contains how to put hair models into the game with adjustable attributes.
 

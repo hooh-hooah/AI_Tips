@@ -1,6 +1,6 @@
 # Creating Custom Skirts
 
-## Related Document
+## Related Documents
 
 This page only contains how to put hair models into the game with adjustable attributes.
 

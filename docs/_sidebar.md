@@ -20,6 +20,8 @@
     -   [Character Top](tutorials/chara-top.md)
     -   [Character Skirt](tutorials/chara-skirt.md)
     -   [Character Glove/Shoes](tutorials/chara-gloves.md)
+    -   [Character Accessory](tutorials/chara-acc.md)
+    -   [Character Skinned Accessory](tutorials/chara-acc-skin.md)
     -   [Studio Items](tutorials/studio-item.md)
     -   [Studio Maps](tutorials/studio-map.md)
     -   [HS2 Main Game Map](tutorials/hs2-map.md)

@@ -1,8 +1,8 @@
 # Creating Custom Studio Item
 
-## Related Document
+## Related Documents
 
-This page only contains how to put hair models into the game with adjustable attributes.
+This page only contains how to put existing 3d models into the game with adjustable attributes.
 
 If you need more basic information like setup folders or preparing hair assets, please visit the pages below before continuing to read this document:
 
