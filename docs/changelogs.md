@@ -21,6 +21,14 @@
     -   Now, AI/HS2 Inspectors Repaint when the content has changed.
     -   Changed all button events to delegate to prevent GUI Stack Failure
 -   Added various ILLUSION shader preview
+-   Added Map Info automatic initialization
+-   Added Various Accessory Automatic initialization
+-   Added Map Event Automatic Generation and Packing (All automatic, no interaction is needed)
+-   Improved Clothing Testing Methods. Now it's not dependent to the scene. Now it's a just prefab
+-   Added ADV Dump Function (For Advanced Developers)
+-   Removed Legacy Mod Packer Code
+-   Reduced Warning Error Logs
+-   Added Developer Utility Extensions
 
 ## 0.4.2
 
