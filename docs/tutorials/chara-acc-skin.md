@@ -1,10 +1,20 @@
 # Creating Skinned Accessory
 
+?> Skinned Accessory has a dependency on the `Hooah` plugin. You need to notify people to download `Hooah` to use your mod.
+
+## What is Skinned Accessory?
+
+![](imgs/exp_low_00.png)
+
+Skinned Accessory is a plugin/mod that allows modders to make clothing working in the accessory slot.
+
+Skinned Accessory will allow people to add layers to their clothing or use another shader for the body's new overlay, such as a glowing tattoo.
+
 ## Related Documents
 
 This page only contains how to put accessories into the game with adjustable attributes.
 
-If you need more basic information like setup folders or preparing hair assets, please visit the pages below before continuing to read this document:
+If you need more basic information like setup folders or preparing hair assets, please visit the pages below before continuing to read this Document:
 
 -   [Getting Started with the hooh's Modding Tool](getting_started.md)
 
@@ -24,10 +34,7 @@ Initialize `Clothing Tester` from `Base Files`. After initiating the prefab to t
 
 ### Place Model
 
-![](imgs/acc_01.png)
-Click `N_Head` if you want to make a Head Accessory; there is plenty of options on the menu. Feel free to try other options.
-
-After clicking the navigation button, put the model to `N_Head` (for this case).
+You can place a model anywhere if you're making the skinned Accessory. Just make sure that your model is well-tested in the `Clothing Tester`. You can check more information at the bottom of [Character Top](tutorials/chara-top.md) Document.
 
 ### Initialize Component
 
@@ -35,19 +42,13 @@ After clicking the navigation button, put the model to `N_Head` (for this case).
 
 You need to unpack the model prefab first to create a new accessory prefab.
 
-![](imgs/acc_03.png)
+![](imgs/sa_00.png)
 
-When you've done putting your mesh to the scene, click it, navigate the right panel, and click the `Initialize Modding Components > Common > Accessory` button.
-
-`N_move` is a core object for adjusting the position of accessory in the character creator. You can set it up inside of the Armature rig in the Blender or create it by yourself.
-
-If you have `N_move` in your model, choose the first option. If it does not, choose the other option.
-
-Then the Modding Tool will automatically find the references in your model and initialize everything to make your model work in the game.
+When you've done putting your mesh to the scene, click it, navigate the right panel, and click the `Initialize Modding Components > Common > Accessory` button and select `Skinned Accessory`.
 
 ### Adjusting Option
 
-![](imgs/acc_04.png)
+![](imgs/sa_01.png)
 
 Well, the Rest of the options are self-explanatory. Color 1,2,3 means enabling color adjustment 1,2,3 in the game.
 
@@ -69,7 +70,7 @@ Unlike the studio thumbnail generator, the normal thumbnail generation will save
 
 The right amount of adjustment will generate fine thumbnails just enough to use for character maker UI.
 
-!> Make sure that those images that you've made are **"Read/Write Enabled"** or unity will refuse to utilize your foreground/background texture. Otherwise, the Unity Editor will refuse to read the texture.
+!> Make sure that those images you've made are **"Read/Write Enabled"** or unity will refuse to utilize your foreground/background texture. Otherwise, the Unity Editor will refuse to read the texture.
 
 ### Creating Mod XML
 
@@ -90,13 +91,15 @@ The right amount of adjustment will generate fine thumbnails just enough to use 
     <!-- This section will contain build information -->
     <build>
         <list type="acchead">
-            <item kind="0" possess="1" name="[hooh] 000" mesh-a="accessory0" parent="N_Head" thumb="thumb_accessory0"/>
+            <item kind="0" possess="1" name="My first accessory" mesh-a="accessory_asset_name" parent="N_Head" thumb="thumb_accessory_asset_name"/>
         </list>
     </build>
 </packer>
 ```
 
-You can set the category and the accessory's default parent by changing the `parent` attribute in the `<item>` tag.
+You can set the category and the accessory's default parent by changing the `parent` attribute in the `<item>` tag. But the skinned accessory will not care about the parent.
+
+So, in this case, choosing the parent is just choosing where the skinned accessory should be.
 
 All of the tag's possible values are in the [XML List Types](technical/category-list.md) Document.
 

@@ -69,7 +69,7 @@ Unlike the studio thumbnail generator, the normal thumbnail generation will save
 
 The right amount of adjustment will generate fine thumbnails just enough to use for character maker UI.
 
-!> Make sure that those images that you've made are **"Read/Write Enabled"** or unity will refuse to utilize your foreground/background texture. Otherwise, the Unity Editor will refuse to read the texture.
+!> Make sure that those images you've made are **"Read/Write Enabled"** or unity will refuse to utilize your foreground/background texture. Otherwise, the Unity Editor will refuse to read the texture.
 
 ### Creating Mod XML
 
@@ -90,7 +90,7 @@ The right amount of adjustment will generate fine thumbnails just enough to use 
     <!-- This section will contain build information -->
     <build>
         <list type="acchead">
-            <item kind="0" possess="1" name="[hooh] 000" mesh-a="accessory0" parent="N_Head" thumb="thumb_accessory0"/>
+            <item kind="0" possess="1" name="My first accessory" mesh-a="accessory_asset_name" parent="N_Head" thumb="thumb_accessory_asset_name"/>
         </list>
     </build>
 </packer>

@@ -200,9 +200,9 @@ _Difficulty: Low_
 
 -   Make Foreground Image or Background Image. It can be transparent but the result icon will not be transparent due to the policy of the Item Finder Plugin
 
--   Make sure that those images that you've mode are 64x64 image. It is recommended to have smaller size icons.
+-   Make sure that those images you've mode are 64x64 image. It is recommended to have smaller size icons.
 
--   Make sure that those images that you've made are **"Read/Write Enabled"** or unity will refuse to utilize your foreground/background texture.
+-   Make sure that those images you've made are **"Read/Write Enabled"** or unity will refuse to utilize your foreground/background texture.
 
     ![1600689442803](images\1600689442803.png)
 
