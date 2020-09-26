@@ -14,9 +14,9 @@ If you need more basic information like setup folders or preparing hair assets, 
 
 ### Validate the map
 
-Ensure that every single mesh objects are inside of the `Layer 11 (Map)` layer and if you're planning to bake any mesh, then check if the objects are properly set to static.
+Ensure that every single mesh objects are inside the `Layer 11 (Map)` layer and if you're planning to bake any mesh, then check if the objects are set properly to static.
 
-After the conversion process, modifying the map will be a bit harder than before, so I recommend you make all the changes before converting the map for the HS2 Main-Game.
+After the conversion process, modifying the map will be a bit harder than before, so I recommend making all the changes before converting the map for the HS2 Main-Game.
 
 ### Converting the map
 
@@ -46,13 +46,29 @@ Place `Post Processing Camera (DELETE ME BEFORE BUILDING MOD)` Object from the `
 
 ![](imgs/hsmap_02.png)
 
-Before adjusting any value, I recommend you to clone the `hs2_default` Post Processing Profile by clicking the "Clone" button.
+Before adjusting any value, I recommend that you clone the `hs2_default` Post Processing Profile by clicking the "Clone" button.
 
 ![](imgs/hsmap_01.png)
 
 You can find detailed information about Post-Processing Effects in the Official ![Unity Documents](https://docs.unity3d.com/Manual/PostProcessingOverview.html).
 
 If you don't grasp the concept of the Post-Processing, there is a good video explanation about Post-Processing from the youtube channel called "Brackeys".
+
+### Adjust H-Points
+
+![](imgs/hpoints_00.png)
+
+You can see `hpoint_map` inside of the root map object.
+
+![](imgs/hpoint_01.png)
+
+I've added all possible h-points in there for default, But I recommend you to use this setup. Don't forget to press the `Initialize And Setup` button in `hpoint_map` after you've done adjusting your h-points.
+
+![](imgs/hpoint_02.png)
+
+Setting the scene wouldn't be that hard. I've integrated approximate positions of h-points, so you don't have to launch the game to adjust the position constantly.
+
+You can hide or show objects depends on the active h-point in the game.
 
 ### Save Scene
 
@@ -77,9 +93,9 @@ Take a screenshot of your map and replace the image inside of the photoshop file
 !> Coming soon
 
 ```bash
-python /q/psdtemplates/makeimg.py  0.png "Gymnasium Morning" ../map_00
-python /q/psdtemplates/makeimg.py  1.png "Gymnasium Noon" ../map_01
-python /q/psdtemplates/makeimg.py  2.png "Gymnasium Night" ../map_02
+python /q/psdtemplates/makeimg.py 0.png "Gymnasium Morning" ../map_00
+python /q/psdtemplates/makeimg.py 1.png "Gymnasium Noon" ../map_01
+python /q/psdtemplates/makeimg.py 2.png "Gymnasium Night" ../map_02
 ```
 
 ### Setting up MapInfo
@@ -96,19 +112,19 @@ You need to register the thumbnails and the scene in Mod XML File first to gener
 
 Check these documents if you still don't get how Mod XML Files are working. - [XML File Structure](technical/xml-file.md) - [Auto-Path Lists](technical/autopath-list.md) - [XML List Types](technical/category-list.md)
 
-After setting up the thumbnails and scenes to Mod XML Files, Find and click the `MapInfo` that you've created.
+After setting up the thumbnails and scenes to Mod XML Files, Find and click the `MapInfo` you've created.
 
 Type your scene name in the `Asset Name` in the inspector and press the "Auto-fix Everything" button to generate basic information.
 
 It will automatically assign the thumbnails, asset bundle names, and the manifest based on the Mod XML Files.
 
-If nothing is getting generated, then check if you properly registered the assets in the Mod XML Files.
+If nothing is getting generated, check if you properly registered the Mod XML files assets.
 
 Also, there is one exception for the map thumbnails. For Map Thumbnails, all of the map thumbnails must comply following name format:
 `{Scene Asset Name}_thumb_s` for small thumbnail for Free-H
 `{Scene Asset Name}_thumb_l` for large thumbnail for Event Map
 
-The ID Number of the map will also be generated incremental based on the first element of the `MapInfo`.
+The modding tool will generate the map's ID incrementally based on the first element of the `MapInfo`.
 
 #### Setting up manually
 
@@ -118,9 +134,9 @@ If you hate automatic generation, you can put everything manually.
 -   `Map Name`: The name of the map. `Japanese Name` will be the main name for "Free-H" and the Event Menu.
 -   `Asset Bundle Name`: The Asset Bundle path for the scene asset.
 -   `Asset Name`: The Scene Asset's name
--   `State`: Exact Purpose Unkown yet.
--   `Draw`: Exact Purpose Unkown yet.
--   `Is Outdoors`: Whether if the map is outside or not.
+-   `State`: Seems like editor use only.
+-   `Draw`: Seems like editor use only.
+-   `Is Outdoors`: Seems like editor use only.
 -   `Is ADV`: Whether if the map if only for the events or not.
 -   `Thumbnail Manifest S`: Manifest Bundle for thumbnails. as
 -   `Thumbnail Bundle S`: Asset Bundle path for thumbnails. It will be the same for the S - and L size.
@@ -129,7 +145,7 @@ If you hate automatic generation, you can put everything manually.
 
 ### Setting up SceneInfo
 
-The event scene info will be automatically generated by the modding tool. so don't worry.
+The modding tool will generate the event scene info. So, don't worry.
 
 ### Setting up Collider
 
@@ -153,7 +169,8 @@ The event scene info will be automatically generated by the modding tool. so don
           <use-dependency />
     </options>
     <bundles>
-        <folder auto-path="maps" from="map00" filter=".*\.unity" target="map00" />
+        <folder auto-path="maps" from="map00" filter=".*\.unity" target="map00"/>
+        <folder auto-path="mapdata" from="map00" filter=".*\.asset" target="map00" />
     </bundles>
     <build>
         <list type="map">
