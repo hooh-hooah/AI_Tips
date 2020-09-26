@@ -31,7 +31,7 @@
     -   ~~Custom Plugin~~ (WIP, Q4)
 -   **Technical Details**
     -   [Shader Informations](technical/shaders.md)
-    -   [Main-Game Plugin Dependency](technical/plugins.md)
+    -   [Plugin Dependency](technical/plugins.md)
     -   [XML File Structure](technical/xml-file.md)
     -   [Auto-Path Lists](technical/autopath-list.md)
     -   [XML List Types](technical/category-list.md)
