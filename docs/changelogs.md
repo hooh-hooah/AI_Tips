@@ -4,8 +4,8 @@
 
 ### 2020-09-27
 
--   Changed archive method: Removed `7z` dependency → changed to `SharpZipLib`.
--   New modding tool document is now available in http://hooh-hooah.github.io/
+-   Changed archiving method: Removed `7z` dependency `7z Instance` → `SharpZipLib DLL Library`.
+-   New modding tool document is now available in [the Official AIHS Modding Tool Document Site](http://hooh-hooah.github.io/)
 -   Added Studio Item Thumbnail Generator
 -   Added and Integrated Image Compression Library with Item Thumbnail Generator
 -   Reworked and Improved Mod Packer.
@@ -29,7 +29,7 @@
 -   Removed Legacy Mod Packer Code
 -   Reduced Warning Error Logs
 -   Added Developer Utility Extensions
--   Added Hanmen's new Shader Replica
+-   Updated Hanmen's new Shader Replica
 
 ## 0.4.2
 
