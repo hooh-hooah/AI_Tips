@@ -18,31 +18,42 @@ You can download [Unity Editor 2018.4.11f by Clicking this](https://unity3d.com/
 
 -   [**Rider**](https://www.jetbrains.com/rider/) - the _best paid_ option
 
-    It works on the go by stealing money from your pocket.
+    EXPENSIVE but worthy. Consider buying one if you're one of that people who making a living with the code
 
 ### Version Control (or update)
 
 -   [Git for Windows](https://git-scm.com/download/win)
-    ... or linux `apt-get install git`
-
-### Nice Sub Text Editor
-
--   [Atom](https://atom.io/)
--   [Sublime Text](https://www.sublimetext.com/)
+    ... or `apt-get install git` for linux OS
+    ... or `brew` for mac.. idk it's your call
 
 ### 3D Model Editor
 
 -   **[Blender](https://www.blender.org/)** - The _best_ free option
--   3dsmax (If you have money) - The _best_ paid option
--   Maya
+-   3dsmax (If you have money) - The _best_ paid option, EXPENSIVE
+-   Maya - ALSO EXPENSIVE
 -   Cinema4D
 -   Metasequoia
 
 ### Image Editor
 
--   Photoshop - The _best_ paid option
+-   Photoshop - The _best_ paid option. 10\$ per month (Creative Cloud)
 -   GIMP
 -   No, MS Paint is not the tool you can use for this one.
+
+## Optional Programs
+
+### Nice Sub Text Editor
+
+You don't always code. You need a lighter alternative.
+
+-   [Sublime Text](https://www.sublimetext.com/)
+
+### Image Converter/Viewer
+
+When you don't know how to open/convert the dds texture / extracting alpha channel from the png.
+
+-   XnView
+-   HoneyView
 
 ## Downloading and Opening the Project
 
