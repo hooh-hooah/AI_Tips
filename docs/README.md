@@ -1,12 +1,14 @@
 # hooh's Modding Tool
 
+?> If you're getting the old version of document constantly, Try to refresh the page with Ctrl+Shift+R.
+
 ## Welcome
 
 Welcome to hooh's Modding Tool Tutorial Central!
 
 You can learn how to make a mod for HS2/AI in one place. You don't have to ask people around where to learn modding anymore!
 
-## Before doing something
+## Before doing anything
 
 This tutorial compilation currently does not covers all generic tutorials, such as generic blender tutorials or generic photoshop tutorials.
 
@@ -41,3 +43,33 @@ Even if you don't know how to mod or make new stuff, sharing this page to the ne
 
 You can consider donating me through the Patreon to keep all of my projects on the rail.
 All kind of support is welcome. Your supports are my main motivation to work on this project.
+
+## Special Thanks
+
+### essu
+
+Thanks for helping me, in general. When I was stuck on something, you were always with me and showed me the direction where I should go.
+
+### 2155X
+
+Thanks for listening to my dumb questions and requests. A few of my works couldn't be possible without you.
+
+### roy12
+
+Providing me the base files. This project couldn't be started without you.
+
+### Hanmen
+
+Thanks for providing us good ILLUSION replica shader. Without you, we couldn't have a nice and fast workflow in the modding tool.
+
+### DeathWeasel, ManlyMarco
+
+Thank you for your works and your contribution to the community. I'm always respecting you for all the things you've done for all of us.
+
+### Enimaroah
+
+Thank you for making and updating "SB3Utility". Without this tool, working on this modding tool was not possible.
+
+### ore-
+
+Thank you for working with the Graphics plugin. I'll improve the graphics plugin to make better graphics for all of us.

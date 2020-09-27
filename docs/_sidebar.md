@@ -1,5 +1,5 @@
 -   [**Welcome**](/)
--   **Generals**
+-   **General**
     -   [Getting Started](getting_started.md)
     -   [General Questions](general-question.md)
     -   [Reporting Issue/Feedback](issue-feedback.md)
@@ -13,6 +13,7 @@
 -   **Modding Tutorials**
     -   [Setting up Folder](tutorials/gearing-up.md)
     -   [Trouble Shooting](tutorials/trouble-shooting.md)
+    -   **Character**
     -   [Character Hair](tutorials/chara-hair.md)
     -   [Character Tattoo/Paint](tutorials/chara-paint.md)
     -   [Character Eyeshadow](tutorials/chara-line.md)
@@ -23,16 +24,16 @@
     -   [Character Glove/Shoes](tutorials/chara-gloves.md)
     -   [Character Accessory](tutorials/chara-acc.md)
     -   [Character Skinned Accessory](tutorials/chara-acc-skin.md)
-    -   Studio
-        -   [Studio Items](tutorials/studio-item.md)
-        -   [Studio Maps](tutorials/studio-map.md)
-    -   Honey Select 2 : Libido
-        -   [Custom Map](tutorials/hs2-map.md)
-        -   ~~Custom Scenario~~ (WIP, Q4)
-    -   AI-Shoujyo
-        -   ~~Custom Furniture~~ (WIP, Q4)
-        -   ~~Custom Map~~ (WIP, Q4)
-        -   ~~Custom Scenario~~ (WIP, Q4)
+    -   **Studio**
+    -   [Studio Items](tutorials/studio-item.md)
+    -   [Studio Maps](tutorials/studio-map.md)
+    -   **Honey Select 2 : Libido**
+    -   [Custom Map](tutorials/hs2-map.md)
+    -   ~~Custom Scenario~~ (WIP, Q4)
+    -   **AI-Shoujyo**
+    -   ~~Custom Furniture~~ (WIP, Q4)
+    -   ~~Custom Map~~ (WIP, Q4)
+    -   ~~Custom Scenario~~ (WIP, Q4)
 -   **Technical Modding**
     -   ~~Custom Plugin~~ (TBD)
     -   ~~Generic Automation~~ (TBD)

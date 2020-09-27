@@ -29,6 +29,7 @@
 -   Removed Legacy Mod Packer Code
 -   Reduced Warning Error Logs
 -   Added Developer Utility Extensions
+-   Added Hanmen's new Shader Replica
 
 ## 0.4.2
 
