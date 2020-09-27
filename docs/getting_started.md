@@ -48,9 +48,17 @@ You can download [Unity Editor 2018.4.11f by Clicking this](https://unity3d.com/
 
 ## Opening the Project
 
+Clone the Whole Project from [**Here**](https://github.com/hooh-hooah/ModdingTool). You can download the repository as a zip file with the `[↓ Code]` button on the webpage.
+
 ## Navigating UI
 
+You can access the main modding tool features with the top menu.
+
 ## Basic Asset Locations
+
+You can find all of the examples in the `Modding Examples` folder. Countless Modding Documents is not going to beat pressing the build button by youself!
+
+Try to make your own mods based on the template. Don't worry when you've lost few original templates. The modding tool repository is always accessible!
 
 ## Post-scriptum
 
