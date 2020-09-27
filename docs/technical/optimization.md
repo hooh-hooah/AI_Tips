@@ -4,83 +4,77 @@
 
 ### Shadow is HEAVY.
 
-If you're having bad performance on your map or studio item, check if your map/item has excessive amount of lights with cast shadow on. 
+If you're having bad performance on your map or studio item, check if your map/item has an excessive amount of lights with cast shadow enabled.
 
-rendering shadow is really expensive operation and they're not recommending people to not make all lights cast dynamic shadow.
+Rendering shadow is a really expensive operation, and they're not recommending people not to make all lights cast a dynamic shadow.
 
-there is few options that you can consider:
+there are a few options that you can consider:
 
- - for studio items and maps : remove all lights completely.
- 
- - for maps: change your map lights into static light, and bake the map. baking process is explained in here.
- 
- - for maps/studio (paid option): get bakery asset and bake your map or studio as lightmap baked prefab. 
- 
-there is no other way than pre-baking all of your light to avoid dynamic shadow fps drop.
+For studio items and maps: remove all lights completely.
+
+-   For maps: change your map lights into static light, and bake the map. You can check the information about baking the light in this Document.
+-   for maps/studio (paid option): get bakery asset and bake your map or studio as lightmap baked prefab.
+
+There is no other way than pre-baking all of your light to avoid dynamic shadow fps drop.
 
 ### Occlusion Probes
 
-for maps, sometimes your map is too slow because the camera is rendering everything in your scene 
+for maps, sometimes your plan is too slow because the camera is rendering everything in your scene
 
-you can reduce drawcalls by implementing occlusion probes
+you can reduce draw calls by implementing occlusion probes
 
-it will kinda messup out of bound shot in studio
+it will kind of mess up out of bound shot in the studio
 
-but it worth the try because it's gonna save your fps
+but it worth the try because it's going to save your fps
 
-### Don't set anything "Real-time"
+### Don't set anything "Real-time".
 
-most of unity's real-time operation is not really big but if everything is set real time, unity is not going to like that and drop the fps
+Most of the unity's real-time operation is not big, but if you set everything in real-time, The Unity Engine can't handle all real-time operations and cause a bad FPS rate.
 
-bake everything as you can.
+Bake everything as you can.
 
-### You don't need 4k Texture for trashcan
+### You don't need 4k Texture for the trashcan
 
-texture optimization is one of the thing you should consider to optimzie your mod
+texture optimization is one of the things you should consider to optimize your mod
 
-most of small background objects can have 512 to 1024 texture
+-   512 to 1024 texture for most of the small background objects
+-   1024 to 2048 for mid-sized Objects
+-   2048 to 4096 for Clothing Textures
 
-mid-size obects 1024 to 2048
+Consider the size and importance of your object. if your item tends to get spotlight often, then use a higher resolution texture
 
-clothings 2048 to 4096
-
-consider the size and importance of your object. if your object tend to get spotlight often then use higher resolution texture
-
-
-!> compressing normal map will cause weird rectangle lighting reflection artifacts. i suggest to use lower resolution normal map with no or less compression applied. 
+!> compressing normal map will cause weird rectangle lighting reflection artifacts. I suggest using a lower resolution normal map with no or less compression applied.
 
 ### Do not re-zip your mod
 
-yes. modding tool zip archive method does not compress anything in zipmod making process
+Yes. modding tool zip archive method does not compress anything in the zipmod making process
 
-but this is all done for optimizing the loading time of the game.
+But this is all done for optimizing the loading time of the game.
 
-if you have to optimize the size of your zipmod, please compress zipmod itself and don't extract and compress again.
+If you have to optimize the size of your zipmod, please compress the zipmod itself and don't extract and compress it again.
 
 ### Use Dependency Loader when it's big
 
-dependency loader is one of plugin i've made, this is used for optimizing the size of your mod and decreasing the loading time of the mod.
+Dependency loader is one of the plugins I've made.
+The Dependency Loader is for optimizing your mod's size and decreasing the loading time of the mod.
 
-if you don't use dependency loader, each asset bundle will save all the dependency to it's bundle and it will cause bloadted bundle size and increased loading time.
+If you don't use a dependency loader, each asset bundle will save all the dependency on its Asset Bundle, and it will cause bloated bundle size and increased loading time.
 
-consider using dependency loader when your zipmod is really big like map+studio item combo.
+Consider using the dependency loader when your zipmod is big, like map+studio item combo.
 
 ## Workflow Performance Optimization
 
-the word optimization is not designed only for 'game performance'. making mod can be faster by automating your process.
+The word optimization is not designed only for 'Game Performance'. Making the mod can be faster by automating your process.
 
-here is few things you can do
+You can automate a bit time-consuming tasks such as:
 
-automatic map thumbmail generation
-
-compiling all studio item icon 
-
-using python to mange things
+-   In-game Map/Studio/Clothing Thumbnail Generation
+-   Applying changes to massive amount of files
 
 ### Make Templates
 
-make your own template to start new mod. it will reduce the time to make mod
+Make your template to start a new mod. it will reduce the time to make the mod
 
 ### Everyday Unity Time Saving: Peek
 
-peek is useful tool that adds many thing 
+peek is a useful tool that adds many things
