@@ -37,7 +37,7 @@ After setting up all materials, Put the model on the scene, and rig up the mater
 
 You can also assign materials in the model import menu that you can see when you click the model.
 
-### Initialize Component
+### Initializing the Component
 
 ![](imgs/chara_00.png)
 

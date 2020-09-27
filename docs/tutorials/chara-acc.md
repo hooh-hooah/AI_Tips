@@ -1,4 +1,4 @@
-# Creating Accessory
+# Creating Custom Accessory
 
 ## Related Documents
 
@@ -29,7 +29,7 @@ Click `N_Head` if you want to make a Head Accessory; there is plenty of options 
 
 After clicking the navigation button, put the model to `N_Head` (for this case).
 
-### Initialize Component
+### Initializing the Component
 
 ![](imgs/acc_02.png)
 

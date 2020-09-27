@@ -4,7 +4,7 @@
 
 This page only contains how to put hair models into the game with adjustable attributes.
 
-If you need more basic information like setup folders or preparing hair assets, please visit the pages below before continuing to read this document:
+If you need more basic information like setup folders or preparing hair assets, please visit the pages below before continuing to read this Document:
 
 -   [Getting Started with the hooh's Modding Tool](getting_started.md)
 
@@ -16,7 +16,7 @@ If you need more basic information like setup folders or preparing hair assets, 
 
 ?> This tutorial only provides information about putting existing mesh to the main game. Please check [Creating Clothing Mesh](prepping/clothing-mesh.md) Document if you want to know how to make a clothing model.
 
-### Setting up assets
+### Setting Up Assets
 
 !> `.OBJ` format does not support FK studio items. Ensure that you're importing `.FBX` format 3D Mesh Files to make FK works on the model.
 
@@ -28,7 +28,7 @@ First, put the model to the scene. The hierarchy does not matter, But make sure 
 
 ![](imgs/top_00.png)
 
-### Initialize Component
+### Initializing the Component
 
 ![](imgs/chara_00.png)
 
@@ -36,7 +36,7 @@ When you've done putting your mesh to the scene, click it, navigate the right pa
 
 Then the Modding Tool will automatically find the references in your model and initialize everything to make your model work in the game.
 
-### Validate the Component
+### Validating Component
 
 ![](imgs/com_00.png)
 
@@ -60,11 +60,19 @@ Just in case when you didn't set things as the Document, you can manually review
 
     You can assign togglable optional meshes for the clothing but remember that you can't toggle optional state in-game.
 
+-   **Cloth Object Assignment**
+
+    This section is for assigning the half-off state of the clothing. If you're making any clothing mod for Top/Bottom, Inner Top/Bottom, or Pantyhose Section, You need to assign the full state of the clothing in this section. Otherwise, It will not work properly.
+
+    Ensure that the component is referencing Top/Bottom Clothing's Full and Half-off state meshes in the section.
+
 -   **Cloth Colors**
 
     Well, as the title says, this is the color information of your clothing. If you enable each color option, you can color your outfit in the game.
 
     Unfortunately, you can't adjust a few sliders in the game if you're using the standard shader. To use all of the game options, you must use `Clothing Shader Replica` for your clothing material.
+
+    You can find all of the included shader information inside the [Shader Informations](technical/shaders.md) Document.
 
     You can find all of the information about the included shader inside the [Shader Informations](technical/shaders.md) Document.
 
@@ -89,6 +97,16 @@ outfit02
 
 The Modding Tool can distinguish the same name assets with a hint, But you must avoid setting all meshes and texture to the same name.
 
+### Optional: Generating the Thumbnail
+
+![](imgs/acc_05.png)
+
+You can generate thumbnails for the accessories you've made quickly with the help of thumbnail generator.
+
+You still can generate the thumbnail without the background or foreground, but I recommend to have your format to distinguish your mod from other mods.
+
+Unlike the studio thumbnail generator, the normal thumbnail generation will save its result to the `thumbs` folder of the folder where the project window is browsing.
+
 ### Creating Mod XML
 
 ```xml
@@ -99,7 +117,8 @@ The Modding Tool can distinguish the same name assets with a hint, But you must 
     <author>My Name</author>
     <description>My first outfit mod</description>
     <bundles>
-        <folder auto-path="prefabs" from="prefabs" filter=".*?\.(psd|png|tif|prefab)"/>
+        <folder auto-path="prefabs" from="top00" filter=".*?\.(psd|png|tif|prefab)"/>
+        <folder auto-path="prefabs" from="innertop00" filter=".*?\.(psd|png|tif|prefab)"/>
         <folder auto-path="thumbs" from="thumbs" filter=".*?\.(psd|png|tif)"/>
     </bundles>
     <build>

@@ -31,7 +31,7 @@ After setting up all materials, Put the model on the scene, and rig up the mater
 
 You can also assign materials in the model import menu that you can see when you click the model.
 
-### Setting up assets
+### Setting Up Assets
 
 ![](imgs/std_02.png)
 

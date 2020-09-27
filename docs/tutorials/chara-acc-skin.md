@@ -1,4 +1,4 @@
-# Creating Skinned Accessory
+# Creating Custom Skinned Accessory
 
 ?> Skinned Accessory has a dependency on the `Hooah` plugin. You need to notify people to download `Hooah` to use your mod.
 
@@ -36,7 +36,7 @@ Initialize `Clothing Tester` from `Base Files`. After initiating the prefab to t
 
 You can place a model anywhere if you're making the skinned Accessory. Just make sure that your model is well-tested in the `Clothing Tester`. You can check more information at the bottom of [Character Top](tutorials/chara-top.md) Document.
 
-### Initialize Component
+### Initializing the Component
 
 ![](imgs/acc_02.png)
 
