@@ -6,11 +6,7 @@ Here by I show my respect to those contributers and mentors.
 
 ## Main-Game Plugins
 
-### Sideloader / BepinEx Plugins
-
--   DeathWeasel
--   ManlyMarco
--   2155X
+Please check the [**Plugin Dependency**](technical/plugins.md) Document to see the Modding Tool's supported/dependant main-game plugins.
 
 ## Unity Packages
 

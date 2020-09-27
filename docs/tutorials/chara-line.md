@@ -1,10 +1,10 @@
-# Creating Custom Face/Body Paints
+# Creating Custom Eyeshadows
 
 ## Related Documents
 
 This page only contains how to put hair models into the game with adjustable attributes.
 
-If you need more basic information like setup folders or preparing hair assets, please visit the pages below before continuing to read this document:
+If you need more basic information like setup folders or preparing hair assets, please visit the pages below before continuing to read this Document:
 
 -   [Getting Started with the hooh's Modding Tool](getting_started.md)
 -   [Setting up Folder](tutorials/gearing-up.md)
@@ -13,7 +13,7 @@ If you need more basic information like setup folders or preparing hair assets, 
 
 ### Creating Textrure
 
-Skinpaint is pretty simple. All you need to make is transparent rectengular icon.
+Making Eyeshadow is a bit tricky. You can start making eyeshadow faster by using one of template available in the project.
 
 You can find all knid of examples in the modding tool's `Examples` Folder.
 
@@ -45,21 +45,22 @@ Go to the `Base Files` folder and put `Generator Tester` prefab to the scene. Un
 
 ```xml
 <packer>
-    <guid>example.custom.skinpaint</guid>
-    <name>Custom Skinpaint</name>
+    <guid>example.custom.eyeshadow</guid>
+    <name>Custom Eyeshadow</name>
     <version>1.0.0</version>
     <author>Your Name</author>
-    <description>My First Skinpaint Pack</description>
+    <description>My First Eyeshadow Pack</description>
     <bundles>
-    	<!-- referencing "skinpaint" folder. path is relative to the folder  where mod.xml is present -->
-        <folder from="skinpaint" auto-path="textures" filter=".+\.(png|tga|tif|psd)"/>
+        <!-- referencing "textures" folder. path is relative to the folder where mod.xml is present -->
+        <each from="textures" auto-path="textures" filter=".+\.(png|tga|tif|psd)"/>
         <folder from="thumbs" auto-path="thumbs" filter=".+\.(png|tga|tif|psd)"/>
-	</bundles>
-	<build>
-		<list type="spaint">
-			<item name="My Custom skinpaint" tex-a="TextureName" tex-g="TextureName2" thumb="ThumbnailName"/>
-		</list>
-	</build>
+    </bundles>
+    <build>
+        <!-- Custom Eyeshadow are for all genders. -->
+        <list type="seyeshadow">
+            <item name="My Custom Eyeshadow" tex-a="my_texture_name"  tex-g="my_texture_name" thumb="my_thumbnail_name"/>
+        </list>
+    </build>
 </packer>
 ```
 
@@ -95,8 +96,8 @@ It depends on your mod size, but it will play a nice sound to notify the packing
 
 !> If you can't find the issue here, then check [**Trouble Shooting**](tutorials/trouble-shooting.md) page.
 
-### Uh.. My Skinpaint is repeating all over the skin/face!
+### Uh.. My Tatto is repeating all over the skin/face!
 
-The Texture's import option is wrong. All of the skinpaint, chests, and other paint parts must be in `Clamp` Wrap Mode.
+The Texture's import option is wrong. All of the tattoo, chests, and other paint parts must be in `Clamp` Wrap Mode.
 
 You can set the **Wrap Mode** by clicking your Texture and search around the middle of the menu.

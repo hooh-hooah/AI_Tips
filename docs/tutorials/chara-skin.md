@@ -1,73 +1,85 @@
-# Creating Custom Skin
+# Creating Custom Skins
 
 ## Related Documents
 
 This page only contains how to put hair models into the game with adjustable attributes.
 
-If you need more basic information like setup folders or preparing hair assets, please visit the pages below before continuing to read this document:
+If you need more basic information like setup folders or preparing hair assets, please visit the pages below before continuing to read this Document:
 
 -   [Getting Started with the hooh's Modding Tool](getting_started.md)
 -   [Setting up Folder](tutorials/gearing-up.md)
 
-## Step
+## Steps
 
-### Making Texture
+### Creating Textrure
 
-First, fill the whole layer with white and go to the channel and make an alpha texture.
+![](imgs/skn_00.png)
 
-Here all that matters. The Alpha channel is the most important thing to make a bodypaint/partial pant texture.
+ILLUSION's shaders are using custom textures for the face textures. So, You need to know each color channel of the texture purpose to create custom skins.
 
-![image-20200214072029064](images\image-20200214072029064.png)
+-   Diffuse Texture
+-   Normal Texture
+-   Occlusion Texture
+    | Channel | Purpose |
+    | -- | ------ |
+    | Red | Glossiness |
+    | Green | Occlusion |
+    | Blue | Translucensy |
+
+Don't forget to set your image to 16-bit Color Depth. Otherwise, you're going to get a lot of blocky artifacts to your custom Texture.
 
 ### Importing Texture
 
-After making textures, Place all textures inside of the `tattoo` folder.
+![](imgs/skn_01.png)
 
-![image-20200214072443472](images\image-20200214072443472.png)
+Save the Textures you've made to your custom Mod Folder. You can see how to set up the folder in the [Setting up Folder](tutorials/gearing-up.md) Document.
 
-It's not over yet! The textures used for the character requires some flags to work in the game properly.
+In this case, I'm going to save all of my textures into the `textures` folder.
 
 When you click the texture file, the inspector will change to "Import Option".
 
-In the "Import Option" menu, set a few
+Change a few options in the inspector menu.
 
--   **Alpha Source** → Input Texture Alpha
--   **Alpha is Transparency** → NO
--   **Streaming Mip Map** → NO
--   **Generate Mip Maps** → NO
 -   **Wrap Mode** → Clamp
 
-!> I recommend not to touch any compression options if you don't know what you're doing. Some compression option will make the texture lose its transparency! You can check [the Unity Engine's Document about texture compression](https://docs.unity3d.com/Manual/class-TextureImporterOverride.html) to see what's going on.
+!> I recommend not to touch any compression options if you don't know what you're doing. Some compression option will make the Texture lose its transparency! You can check [the Unity Engine's Document about texture compression](https://docs.unity3d.com/Manual/class-TextureImporterOverride.html) to see what's going on.
 
-![image-20200214072527660](images\image-20200214072527660.png)
+### Testing Texture
 
-### Understanding Skin Shader
+![](imgs/skn_02.png)
 
-| texture | channel | description |
-| ------- | ------- | ----------- |
-| a       | b       | c           |
+Go to the `Base Files` folder and put `Texture Tester` prefab to the scene.
 
-you can find detailed information in here
+Assign Textures that you want to test in the component. You can assign textures by simple drag and drop the texture to the slot.
 
--   [ILLUSION Standard](technical/illusion-system.md)
--   [ILLUSION Shader](technical/illusion-shader.md)
-
-### Previeing your skin Texture
-
-### Setup Mod XML File
+### Creating Mod XML File
 
 ```xml
 <packer>
-	...
+    <guid>example.custom.skins</guid>
+    <name>Custom skins</name>
+    <version>1.0.0</version>
+    <author>Your Name</author>
+    <description>My First skins Pack</description>
     <bundles>
-    	<!-- referencing "tattoo" folder. path is relative to the folder where mod.xml is present -->
-        <folder from="tattoo" auto-path="textures" filter=".+\.(png|tga|tif|psd)"/>
-	</bundles>
-	<build name="example_bodypaint">
-		<list type="spaint">
-			<item kind="" possess="" name="My Custom Tattoo" tex-a="TextureName" tex-g="TextureName2" thumb="ThumbnailName"/>
+        <!-- referencing "textures" folder. path is relative to the folder where mod.xml is present -->
+        <folder from="textures" auto-path="detail00" filter=".+\.(png|tga|tif|psd)"/>
+        <folder from="textures" auto-path="detail01" filter=".+\.(png|tga|tif|psd)"/>
+        <folder from="textures" auto-path="diffuse00" filter=".+\.(png|tga|tif|psd)"/>
+        <folder from="textures" auto-path="diffuse01" filter=".+\.(png|tga|tif|psd)"/>
+        <folder from="thumbs" auto-path="thumbs" filter=".+\.(png|tga|tif|psd)"/>
+    </bundles>
+
+    <build>
+		<list type="fdetailb">
+			<item kind="0" possess="1" name="My First Detail Skin" tex-a="OcclusionTexture" tex-n="NormalTexture" thumb="ThumbnailTexture1"/>
+			<item kind="0" possess="1" name="My First Detail Skin" tex-a="OcclusionTexture2" tex-n="NormalTexture2" thumb="ThumbnailTexture1"/>
 		</list>
-	</build>
+		<list type="fskinb">
+			<item kind="0" possess="1" name="My First Skin" tex-a="DiffuseTexture" thumb="ThumbnailTexture2"/>
+			<item kind="0" possess="1" name="My First Skin" tex-a="DiffuseTexture2" thumb="ThumbnailTexture2"/>
+		</list>
+    </build>
 </packer>
 ```
 
@@ -81,7 +93,7 @@ For more detailed information, you can check those documents for reference.
 -   [Auto-Path Lists](technical/autopath-list.md) for `<folder auto-path>`
 -   [XML List Types](technical/category-list.md) for `<list type>` and `<item>`
 
-### Build Mod
+### Building Mod
 
 ![](imgs/mod_00.png)
 
@@ -97,8 +109,12 @@ Then you're good to go. Press the big green button and to build the mod.
 
 It depends on your mod size, but it will play a nice sound to notify the packing is done after a few seconds or minutes.
 
-### Testing your Skin Texture
-
-### Trouble Shooting
+## Trouble Shooting
 
 !> If you can't find the issue here, then check [**Trouble Shooting**](tutorials/trouble-shooting.md) page.
+
+### Uh.. My Tatto is repeating all over the skin/face!
+
+The Texture's import option is wrong. All of the tattoo, chests, and other paint parts must be in `Clamp` Wrap Mode.
+
+You can set the **Wrap Mode** by clicking your Texture and search around the middle of the menu.

@@ -1,4 +1,4 @@
-# How to make hairs
+# Creating Custom Hairs
 
 !> **The New Modding Tool’s Hair Support is postponed to September 30 due to SB3Utility Version Update and stabilizing.** You won’t be able to mod new hair until the update. Sorry for the inconvenience.
 
