@@ -2,8 +2,6 @@
 
 ## Required Programs
 
-You can choose one option in each category. Choose wisely.
-
 ### Unity Editor 2018.4.11f
 
 You can download [Unity Editor 2018.4.11f by Clicking this](https://unity3d.com/get-unity/download/archive).
@@ -46,9 +44,23 @@ You can download [Unity Editor 2018.4.11f by Clicking this](https://unity3d.com/
 -   GIMP
 -   No, MS Paint is not the tool you can use for this one.
 
-## Opening the Project
+## Downloading and Opening the Project
+
+### Downloading the Project
 
 Clone the Whole Project from [**Here**](https://github.com/hooh-hooah/ModdingTool). You can download the repository as a zip file with the `[↓ Code]` button on the webpage.
+
+### Opening the Project
+
+Open the Unity Editor and reference **unzipped project folder**. Then the Unity Editor will do the rest of the job.
+
+Wait until the editor is fully initialized. You'll get some errores if you didn't installed any of required program:
+
+-   `EDITOR`: The Unity Editor
+-   `IDE`: Visual Studio or Visual Studio Code
+-   `VCS`: Git for Windows (or linux)
+
+**Also, do not include any Non-english character in the modding tool's path!**
 
 ## Navigating UI
 

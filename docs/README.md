@@ -25,13 +25,13 @@ There is a localization folder in the repository. feel free to modify the docume
 ### Adding New Tutorials
 
 You can let other people know about your tips and generic tutorials. Feel free to add a new document to the repository.
-You can add new tutorials in this [repository](https://github.com/hooh-hooah/hooh-hooah.github.io).
+You can add new tutorials in this [**repository**](https://github.com/hooh-hooah/hooh-hooah.github.io).
 Unfortunately, All of the contributions will get moderated before they get applied to the website.
 
 ### Contributing Modding Tool Development
 
 I'm always open to a new pull request. Still, the modding tool has a long way to go. I'd like to have someone who can help me improve the modding experience for everyone.
-You can start development by cloning this [repository](https://github.com/hooh-hooah/ModdingTool).
+You can start development by cloning this [**repository**](https://github.com/hooh-hooah/ModdingTool).
 
 ### The most simple way
 
@@ -41,7 +41,7 @@ Even if you don't know how to mod or make new stuff, sharing this page to the ne
 
 ### <3
 
-You can consider donating me through the Patreon to keep all of my projects on the rail.
+You can consider donating me through [the Patreon](https://twitter.com/hooh_hooah) to keep all of my projects on the rail.
 All kind of support is welcome. Your supports are my main motivation to work on this project.
 
 ## Special Thanks
