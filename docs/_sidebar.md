@@ -35,10 +35,10 @@
     -   ~~Custom Map~~ (WIP, Q4)
     -   ~~Custom Scenario~~ (WIP, Q4)
 -   **Technical Modding**
-    -   ~~Custom Plugin~~ (TBD)
+    -   [Shader Informations](plugins/creating-plugin.md)
+    -   [Plugin Dependency](plugin/debugging-plugin.md)
     -   ~~Generic Automation~~ (TBD)
 -   **Technical Details**
-
     -   [Shader Informations](technical/shaders.md)
     -   [Plugin Dependency](technical/plugins.md)
     -   [XML File Structure](technical/xml-file.md)
