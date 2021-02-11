@@ -52,6 +52,8 @@
     -   [ILLUSION Standard](technical/illusion-system.md)
         -   [Honey Select 2 ADV](technical/adv-hs2.md)
         -   [AI-Shoujyo ADV](technical/adv-ai.md)
+    -   [Directory Structures](technical/dir-ai.md)
+        -   [AI-Shoujyo](technical/dir-ai.md)
     -   [ILLUSION Shader](technical/illusion-shader.md)
     -   [Optimization](technical/optimization.md)
 
